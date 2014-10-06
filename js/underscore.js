@@ -3,7 +3,7 @@
 //     (c) 2009-2013 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
 //     Underscore may be freely distributed under the MIT license.
 
-(function() {
+//(function() {
 
   // Baseline setup
   // --------------
@@ -1002,11 +1002,11 @@
 
   // Define a fallback version of the method in browsers (ahem, IE), where
   // there isn't any inspectable "Arguments" type.
-  if (!_.isArguments(arguments)) {
+  //if (!_.isArguments(arguments)) {
     _.isArguments = function(obj) {
       return !!(obj && _.has(obj, 'callee'));
     };
-  }
+  //}
 
   // Optimize `isFunction` if appropriate.
   if (typeof (/./) !== 'function') {
@@ -1273,4 +1273,4 @@
 
   });
 
-}).call(this);
+//}).call(this);

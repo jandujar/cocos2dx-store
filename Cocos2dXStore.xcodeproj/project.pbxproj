@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9D52644319DBE06100BDA0F5 /* CCVirtualGood.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D1EE19B1C4FF0054EA87 /* CCVirtualGood.cpp */; };
-		9D52644419DBE06100BDA0F5 /* CCNonConsumableItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D1D619B1C4FF0054EA87 /* CCNonConsumableItem.cpp */; };
+		9D52644419DBE06100BDA0F5 /* (null) in Sources */ = {isa = PBXBuildFile; };
 		9D52644519DBE06100BDA0F5 /* CCVirtualCurrency.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D1DF19B1C4FF0054EA87 /* CCVirtualCurrency.cpp */; };
 		9D52644619DBE06100BDA0F5 /* CCSingleUseVG.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D1EA19B1C4FF0054EA87 /* CCSingleUseVG.cpp */; };
 		9D52644719DBE06100BDA0F5 /* CCPurchaseWithVirtualItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D1FA19B1C4FF0054EA87 /* CCPurchaseWithVirtualItem.cpp */; };
@@ -53,7 +53,7 @@
 		9D52647419DBE06100BDA0F5 /* CCSingleUseVG.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D1EB19B1C4FF0054EA87 /* CCSingleUseVG.h */; };
 		9D52647519DBE06100BDA0F5 /* CCSoomlaStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D1C419B1C4FF0054EA87 /* CCSoomlaStore.h */; };
 		9D52647619DBE06100BDA0F5 /* CCLifetimeVG.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D1E719B1C4FF0054EA87 /* CCLifetimeVG.h */; };
-		9D52647719DBE06100BDA0F5 /* CCNonConsumableItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D1D719B1C4FF0054EA87 /* CCNonConsumableItem.h */; };
+		9D52647719DBE06100BDA0F5 /* (null) in Headers */ = {isa = PBXBuildFile; };
 		9D52647819DBE06100BDA0F5 /* CCSingleUsePackVG.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D1E919B1C4FF0054EA87 /* CCSingleUsePackVG.h */; };
 		9D52647919DBE06100BDA0F5 /* CCEquippableVG.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D1E519B1C4FF0054EA87 /* CCEquippableVG.h */; };
 		9D52647A19DBE06100BDA0F5 /* CCStoreInventory.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D1CC19B1C4FF0054EA87 /* CCStoreInventory.h */; };
@@ -116,11 +116,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9D41016D1978D35200907FA8 /* libCocos2dXiOSCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCocos2dXiOSCore.a; path = "soomla-native/compilations/ios/libCocos2dXiOSCore.a"; sourceTree = "<group>"; };
-		9D41016E1978D35200907FA8 /* libSoomlaiOSCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSoomlaiOSCore.a; path = "soomla-native/compilations/ios/libSoomlaiOSCore.a"; sourceTree = "<group>"; };
 		9D52648219DBE06100BDA0F5 /* libCocos2dXStoreWithJsb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCocos2dXStoreWithJsb.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D63D09D19B1B20D0054EA87 /* libCocos2dXiOSCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCocos2dXiOSCore.a; path = build/ios/libCocos2dXiOSCore.a; sourceTree = "<group>"; };
-		9D63D09E19B1B20D0054EA87 /* libSoomlaiOSCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSoomlaiOSCore.a; path = build/ios/libSoomlaiOSCore.a; sourceTree = "<group>"; };
 		9D63D1C119B1C4FF0054EA87 /* CCSimpleStoreEventHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCSimpleStoreEventHandler.cpp; sourceTree = "<group>"; };
 		9D63D1C219B1C4FF0054EA87 /* CCSimpleStoreEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSimpleStoreEventHandler.h; sourceTree = "<group>"; };
 		9D63D1C319B1C4FF0054EA87 /* CCSoomlaStore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCSoomlaStore.cpp; sourceTree = "<group>"; };
@@ -358,7 +354,7 @@
 				9D52647419DBE06100BDA0F5 /* CCSingleUseVG.h in Headers */,
 				9D52647519DBE06100BDA0F5 /* CCSoomlaStore.h in Headers */,
 				9D52647619DBE06100BDA0F5 /* CCLifetimeVG.h in Headers */,
-				9D52647719DBE06100BDA0F5 /* CCNonConsumableItem.h in Headers */,
+				9D52647719DBE06100BDA0F5 /* (null) in Headers */,
 				9D52647819DBE06100BDA0F5 /* CCSingleUsePackVG.h in Headers */,
 				9D52647919DBE06100BDA0F5 /* CCEquippableVG.h in Headers */,
 				9D52647A19DBE06100BDA0F5 /* CCStoreInventory.h in Headers */,
@@ -472,7 +468,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D52644319DBE06100BDA0F5 /* CCVirtualGood.cpp in Sources */,
-				9D52644419DBE06100BDA0F5 /* CCNonConsumableItem.cpp in Sources */,
+				9D52644419DBE06100BDA0F5 /* (null) in Sources */,
 				9D52644519DBE06100BDA0F5 /* CCVirtualCurrency.cpp in Sources */,
 				9D52644619DBE06100BDA0F5 /* CCSingleUseVG.cpp in Sources */,
 				9D52644719DBE06100BDA0F5 /* CCPurchaseWithVirtualItem.cpp in Sources */,
@@ -545,13 +541,13 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"\"$(SRCROOT)/../../cocos2dx\"",
-					"\"$(SRCROOT)/../../cocos2dx/include\"",
-					"\"$(SRCROOT)/../../cocos2dx/kazmath/include\"",
-					"\"$(SRCROOT)/../../cocos2dx/platform/third_party/ios\"",
-					"\"$(SRCROOT)/../../cocos2dx/platform/ios\"",
-					"\"$(SRCROOT)/../../cocos2dx/platform/ios/Simulation\"",
-					"$(SRCROOT)/../../external/jansson",
+					"\"$(SRCROOT)/../cocos2d-x/cocos2dx\"",
+					"\"$(SRCROOT)/../cocos2d-x/cocos2dx/include\"",
+					"\"$(SRCROOT)/../cocos2d-x/cocos2dx/kazmath/include\"",
+					"\"$(SRCROOT)/../cocos2d-x/cocos2dx/platform/third_party/ios\"",
+					"\"$(SRCROOT)/../cocos2d-x/cocos2dx/platform/ios\"",
+					"\"$(SRCROOT)/../cocos2d-x/cocos2dx/platform/ios/Simulation\"",
+					"$(SRCROOT)/../proj.ios/libs/jansson",
 					"$(SRCROOT)/build/ios/headers/**",
 					"$(SRCROOT)/../soomla-cocos2dx-core/Soomla/**",
 				);
@@ -581,13 +577,13 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"\"$(SRCROOT)/../../cocos2dx\"",
-					"\"$(SRCROOT)/../../cocos2dx/include\"",
-					"\"$(SRCROOT)/../../cocos2dx/kazmath/include\"",
-					"\"$(SRCROOT)/../../cocos2dx/platform/third_party/ios\"",
-					"\"$(SRCROOT)/../../cocos2dx/platform/ios\"",
-					"\"$(SRCROOT)/../../cocos2dx/platform/ios/Simulation\"",
-					"$(SRCROOT)/../../external/jansson",
+					"\"$(SRCROOT)/../cocos2d-x/cocos2dx\"",
+					"\"$(SRCROOT)/../cocos2d-x/cocos2dx/include\"",
+					"\"$(SRCROOT)/../cocos2d-x/cocos2dx/kazmath/include\"",
+					"\"$(SRCROOT)/../cocos2d-x/cocos2dx/platform/third_party/ios\"",
+					"\"$(SRCROOT)/../cocos2d-x/cocos2dx/platform/ios\"",
+					"\"$(SRCROOT)/../cocos2d-x/cocos2dx/platform/ios/Simulation\"",
+					"$(SRCROOT)/../proj.ios\U0010/libs/jansson",
 					"$(SRCROOT)/build/ios/headers/**",
 					"$(SRCROOT)/../soomla-cocos2dx-core/build/ios/headers/**",
 					"$(SRCROOT)/../soomla-cocos2dx-core/Soomla/**",
