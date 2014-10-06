@@ -584,12 +584,12 @@ Soomla = new function () {
         return false;
       }
 
-      if (storeParams.androidPublicKey.length == 0) {
+      if (sys.os == "android" && storeParams.androidPublicKey.length == 0) {
         logError("SOOMLA/COCOS2DX MISSING publickKey !!! Stopping here !!");
         return false;
       }
 
-      if (storeParams.androidPublicKey == this.SOOMLA_AND_PUB_KEY_DEFAULT) {
+      if (sys.os == "android" && storeParams.androidPublicKey == this.SOOMLA_AND_PUB_KEY_DEFAULT) {
         logError("SOOMLA/COCOS2DX You have to change android publicKey !!! Stopping here !!");
         return false;
       }
