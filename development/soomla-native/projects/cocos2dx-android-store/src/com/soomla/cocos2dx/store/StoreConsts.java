@@ -6,18 +6,17 @@ package com.soomla.cocos2dx.store;
  *         time 6:49 PM
  */
 public class StoreConsts {
-    public static final String JSON_JSON_TYPE_MARKET_ITEM = "marketItem";
-    public static final String JSON_JSON_TYPE_NON_CONSUMABLE_ITEM = "nonConsumableItem";
-    public static final String JSON_JSON_TYPE_VIRTUAL_CATEGORY = "virtualCategory";
-    public static final String JSON_JSON_TYPE_VIRTUAL_CURRENCY = "virtualCurrency";
-    public static final String JSON_JSON_TYPE_VIRTUAL_CURRENCY_PACK = "virtualCurrencyPack";
-    public static final String JSON_JSON_TYPE_EQUIPPABLE_VG = "equippableVG";
-    public static final String JSON_JSON_TYPE_LIFETIME_VG = "lifetimeVG";
-    public static final String JSON_JSON_TYPE_SINGLE_USE_PACK_VG = "singleUsePackVG";
-    public static final String JSON_JSON_TYPE_SINGLE_USE_VG = "singleUseVG";
-    public static final String JSON_JSON_TYPE_UPGRADE_VG = "upgradeVG";
+    public static final String JSON_JSON_TYPE_MARKET_ITEM = "MarketItem";
+    public static final String JSON_JSON_TYPE_VIRTUAL_CATEGORY = "VirtualCategory";
+    public static final String JSON_JSON_TYPE_VIRTUAL_CURRENCY = "VirtualCurrency";
+    public static final String JSON_JSON_TYPE_VIRTUAL_CURRENCY_PACK = "VirtualCurrencyPack";
+    public static final String JSON_JSON_TYPE_EQUIPPABLE_VG = "EquippableVG";
+    public static final String JSON_JSON_TYPE_LIFETIME_VG = "LifetimeVG";
+    public static final String JSON_JSON_TYPE_SINGLE_USE_PACK_VG = "SingleUsePackVG";
+    public static final String JSON_JSON_TYPE_SINGLE_USE_VG = "SingleUseVG";
+    public static final String JSON_JSON_TYPE_UPGRADE_VG = "UpgradeVG";
 
-    public static final String JSON_JSON_TYPE_ITEM     = "item";
+    public static final String JSON_JSON_TYPE_ITEM     = "VirtualItemReward";
 
     public static final String EVENT_AUTH_LOGIN_FAILED = "com.soomla.profile.events.auth.LoginFailedEvent";
     public static final String EVENT_AUTH_LOGIN_FINISHED = "com.soomla.profile.events.auth.LoginFinishedEvent";

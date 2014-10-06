@@ -22,7 +22,6 @@
 #include "../domain/virtualGoods/CCSingleUsePackVG.h"
 #include "../domain/virtualCurrencies/CCVirtualCurrency.h"
 #include "../domain/virtualCurrencies/CCVirtualCurrencyPack.h"
-#include "../domain/CCNonConsumableItem.h"
 #include "../domain/CCMarketItem.h"
 #include "CCNdkBridge.h"
 #include "CCDomainFactory.h"
@@ -106,22 +105,11 @@ namespace soomla {
 			}
         }
 
-
-        CCArray *nonConsumablesJSON = CCArray::create();
-        {
-            CCArray *nonConsumables = storeAssets->getNonConsumableItems();
-            CCObject *obj;
-            CCARRAY_FOREACH(nonConsumables, obj) {
-				nonConsumablesJSON->addObject(((CCNonConsumableItem *)obj)->toDictionary());
-			}
-        }
-
         CCDictionary *storeAssetsObj = CCDictionary::create();
         storeAssetsObj->setObject(categoriesJSON, CCStoreConsts::JSON_STORE_CATEGORIES);
         storeAssetsObj->setObject(currenciesJSON, CCStoreConsts::JSON_STORE_CURRENCIES);
         storeAssetsObj->setObject(packsJSON, CCStoreConsts::JSON_STORE_CURRENCY_PACKS);
         storeAssetsObj->setObject(goodsJSON, CCStoreConsts::JSON_STORE_GOODS);
-        storeAssetsObj->setObject(nonConsumablesJSON, CCStoreConsts::JSON_STORE_NON_CONSUMABLES);
 
         CCDictionary *params = CCDictionary::create();
         params->setObject(CCString::create("CCStoreAssets::init"), "method");
@@ -237,16 +225,6 @@ namespace soomla {
 
         return CCDomainHelper::getInstance()->getDomainsFromDictArray(
                 retArray, CCStoreConsts::JSON_JSON_TYPE_VIRTUAL_CURRENCY_PACK);
-    }
-
-    CCArray *CCStoreInfo::getNonConsumableItems() {
-        CCDictionary *params = CCDictionary::create();
-        params->setObject(CCString::create("CCStoreInfo::getNonConsumableItems"), "method");
-		CCDictionary *retParams = (CCDictionary *) CCNdkBridge::callNative (params, NULL);
-		CCArray *retArray = (CCArray *)retParams->objectForKey("return");
-
-        return CCDomainHelper::getInstance()->getDomainsFromDictArray(
-                retArray, CCStoreConsts::JSON_JSON_TYPE_NON_CONSUMABLE_ITEM);
     }
 
     CCArray *CCStoreInfo::getVirtualCategories() {

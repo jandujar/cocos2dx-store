@@ -12,6 +12,8 @@
 		372B780B298D6D9E9EDA39E3 /* StoreAssetsBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 372B7C5609E67F3CE6D2ED65 /* StoreAssetsBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		372B78966D18F2EBEB0E3604 /* StoreService.mm in Sources */ = {isa = PBXBuildFile; fileRef = 372B7BAE42F9F350693EAA73 /* StoreService.mm */; };
 		C0B3C5F3168C6D0C00161FAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B3C5F2168C6D0C00161FAA /* Foundation.framework */; };
+		F820C00E19DC4F8E0084BBA5 /* StoreTypeConsts.h in Headers */ = {isa = PBXBuildFile; fileRef = F820C00C19DC4F8E0084BBA5 /* StoreTypeConsts.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F820C00F19DC4F8E0084BBA5 /* StoreTypeConsts.mm in Sources */ = {isa = PBXBuildFile; fileRef = F820C00D19DC4F8E0084BBA5 /* StoreTypeConsts.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		9D1D39B719018BB0000EC503 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		C0B3C5EF168C6D0C00161FAA /* libCocos2dXiOSStore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCocos2dXiOSStore.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0B3C5F2168C6D0C00161FAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F820C00C19DC4F8E0084BBA5 /* StoreTypeConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreTypeConsts.h; sourceTree = "<group>"; };
+		F820C00D19DC4F8E0084BBA5 /* StoreTypeConsts.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = StoreTypeConsts.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +43,8 @@
 		372B7A44C0550E964CA7C86D /* StoreBridge */ = {
 			isa = PBXGroup;
 			children = (
+				F820C00C19DC4F8E0084BBA5 /* StoreTypeConsts.h */,
+				F820C00D19DC4F8E0084BBA5 /* StoreTypeConsts.mm */,
 				372B740D6FDFF90ADE3342AB /* StoreService.h */,
 				372B7BAE42F9F350693EAA73 /* StoreService.mm */,
 				372B7C5609E67F3CE6D2ED65 /* StoreAssetsBridge.h */,
@@ -89,6 +95,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				372B75B34C77C6104011311A /* StoreService.h in Headers */,
+				F820C00E19DC4F8E0084BBA5 /* StoreTypeConsts.h in Headers */,
 				372B780B298D6D9E9EDA39E3 /* StoreAssetsBridge.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -162,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				372B78966D18F2EBEB0E3604 /* StoreService.mm in Sources */,
+				F820C00F19DC4F8E0084BBA5 /* StoreTypeConsts.mm in Sources */,
 				372B7431D09F1A3BAE7AF191 /* StoreAssetsBridge.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

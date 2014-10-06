@@ -2,6 +2,7 @@
 // Created by Fedor Shubin on 6/12/14.
 //
 
+#import "StoreTypeConsts.h"
 #import "StoreService.h"
 #import "NdkGlue.h"
 #import "DomainHelper.h"
@@ -15,7 +16,6 @@
 #import "EquippableVG.h"
 #import "UpgradeVG.h"
 #import "MarketItem.h"
-#import "NonConsumableItem.h"
 #import "VirtualCategory.h"
 #import "VirtualCurrencyPack.h"
 #import "SingleUsePackVG.h"
@@ -55,58 +55,52 @@
 
 + (void)initDomainHelper {
 
-    [[DomainHelper sharedDomainHelper] registerType:@"equippableVG"
+    [[DomainHelper sharedDomainHelper] registerType:(NSString *)JSON_JSON_TYPE_EQUIPPABLE_VG
                                       withClassName:NSStringFromClass([EquippableVG class])
                                            andBlock:^id(NSDictionary *dict) {
                                                return [[[EquippableVG alloc] initWithDictionary:dict] autorelease];
                                            }];
-    [[DomainHelper sharedDomainHelper] registerType:@"lifetimeVG"
+    [[DomainHelper sharedDomainHelper] registerType:(NSString *)JSON_JSON_TYPE_LIFETIME_VG
                                       withClassName:NSStringFromClass([LifetimeVG class])
                                            andBlock:^id(NSDictionary *dict) {
                                                return [[[LifetimeVG alloc] initWithDictionary:dict] autorelease];
                                            }];
-    [[DomainHelper sharedDomainHelper] registerType:@"singleUsePackVG"
+    [[DomainHelper sharedDomainHelper] registerType:(NSString *)JSON_JSON_TYPE_SINGLE_USE_PACK_VG
                                       withClassName:NSStringFromClass([SingleUsePackVG class])
                                            andBlock:^id(NSDictionary *dict) {
                                                return [[[SingleUsePackVG alloc] initWithDictionary:dict] autorelease];
                                            }];
-    [[DomainHelper sharedDomainHelper] registerType:@"singleUseVG"
+    [[DomainHelper sharedDomainHelper] registerType:(NSString *)JSON_JSON_TYPE_SINGLE_USE_VG
                                       withClassName:NSStringFromClass([SingleUseVG class])
                                            andBlock:^id(NSDictionary *dict) {
                                                return [[[SingleUseVG alloc] initWithDictionary:dict] autorelease];
                                            }];
-    [[DomainHelper sharedDomainHelper] registerType:@"upgradeVG"
+    [[DomainHelper sharedDomainHelper] registerType:(NSString *)JSON_JSON_TYPE_UPGRADE_VG
                                       withClassName:NSStringFromClass([UpgradeVG class])
                                            andBlock:^id(NSDictionary *dict) {
                                                return [[[UpgradeVG alloc] initWithDictionary:dict] autorelease];
                                            }];
-    [[DomainHelper sharedDomainHelper] registerType:@"virtualCurrency"
+    [[DomainHelper sharedDomainHelper] registerType:(NSString *)JSON_JSON_TYPE_VIRTUAL_CURRENCY
                                       withClassName:NSStringFromClass([VirtualCurrency class])
                                            andBlock:^id(NSDictionary *dict) {
                                                return [[[VirtualCurrency alloc] initWithDictionary:dict] autorelease];
                                            }];
-    [[DomainHelper sharedDomainHelper] registerType:@"virtualCurrencyPack"
+    [[DomainHelper sharedDomainHelper] registerType:(NSString *)JSON_JSON_TYPE_VIRTUAL_CURRENCY_PACK
                                       withClassName:NSStringFromClass([VirtualCurrencyPack class])
                                            andBlock:^id(NSDictionary *dict) {
                                                return [[[VirtualCurrencyPack alloc] initWithDictionary:dict] autorelease];
                                            }];
-    [[DomainHelper sharedDomainHelper] registerType:@"nonConsumableItem"
-                                      withClassName:NSStringFromClass([NonConsumableItem class])
-                                           andBlock:^id(NSDictionary *dict) {
-                                               return [[[NonConsumableItem alloc] initWithDictionary:dict] autorelease];
-                                           }];
-
-    [[DomainHelper sharedDomainHelper] registerType:@"marketItem"
+    [[DomainHelper sharedDomainHelper] registerType:(NSString *)JSON_JSON_TYPE_MARKET_ITEM
                                       withClassName:NSStringFromClass([MarketItem class])
                                            andBlock:^id(NSDictionary *dict) {
                                                return [[[MarketItem alloc] initWithDictionary:dict] autorelease];
                                            }];
-    [[DomainHelper sharedDomainHelper] registerType:@"virtualCategory"
+    [[DomainHelper sharedDomainHelper] registerType:(NSString *)JSON_JSON_TYPE_VIRTUAL_CATEGORY
                                       withClassName:NSStringFromClass([VirtualCategory class])
                                            andBlock:^id(NSDictionary *dict) {
                                                return [[[VirtualCategory alloc] initWithDictionary:dict] autorelease];
                                            }];
-    [[DomainHelper sharedDomainHelper] registerType:@"item"
+    [[DomainHelper sharedDomainHelper] registerType:(NSString *)JSON_JSON_TYPE_ITEM
                                       withClassName:NSStringFromClass([VirtualItemReward class])
                                            andBlock:^id(NSDictionary *dict) {
                                                return [[[VirtualItemReward alloc] initWithDictionary:dict] autorelease];
@@ -233,22 +227,6 @@
         [StoreInventory removeUpgrades:goodItemId];
     }];
 
-    [ndkGlue registerCallHandlerForKey:@"CCStoreInventory::nonConsumableItemExists" withBlock:^(NSDictionary *parameters, NSMutableDictionary *retParameters) {
-        NSString *nonConsItemId = (NSString *) [parameters objectForKey:@"nonConsItemId"];
-        bool res = [StoreInventory nonConsumableItemExists:nonConsItemId];
-        [retParameters setObject:[NSNumber numberWithBool:res] forKey:@"return"];
-    }];
-
-    [ndkGlue registerCallHandlerForKey:@"CCStoreInventory::addNonConsumableItem" withBlock:^(NSDictionary *parameters, NSMutableDictionary *retParameters) {
-        NSString *nonConsItemId = (NSString *) [parameters objectForKey:@"nonConsItemId"];
-        [StoreInventory addNonConsumableItem:nonConsItemId];
-    }];
-
-    [ndkGlue registerCallHandlerForKey:@"CCStoreInventory::removeNonConsumableItem" withBlock:^(NSDictionary *parameters, NSMutableDictionary *retParameters) {
-        NSString *nonConsItemId = (NSString *) [parameters objectForKey:@"nonConsItemId"];
-        [StoreInventory removeNonConsumableItem:nonConsItemId];
-    }];
-
     [ndkGlue registerCallHandlerForKey:@"CCStoreInfo::getItemByItemId" withBlock:^(NSDictionary *parameters, NSMutableDictionary *retParameters) {
         NSString *itemId = (NSString *) [parameters objectForKey:@"itemId"];
         VirtualItem* vi = [[StoreInfo getInstance] virtualItemWithId:itemId];
@@ -305,12 +283,6 @@
     [ndkGlue registerCallHandlerForKey:@"CCStoreInfo::getVirtualCurrencyPacks" withBlock:^(NSDictionary *parameters, NSMutableDictionary *retParameters) {
         NSArray *virtualCurrencyPacks = [[StoreInfo getInstance] virtualCurrencyPacks];
         NSArray *retObj = [[DomainHelper sharedDomainHelper] getDictListFromDomains:virtualCurrencyPacks];
-        [retParameters setObject: retObj forKey: @"return"];
-    }];
-
-    [ndkGlue registerCallHandlerForKey:@"CCStoreInfo::getNonConsumableItems" withBlock:^(NSDictionary *parameters, NSMutableDictionary *retParameters) {
-        NSArray *nonConsumableItems = [[StoreInfo getInstance] nonConsumableItems];
-        NSArray *retObj = [[DomainHelper sharedDomainHelper] getDictListFromDomains:nonConsumableItems];
         [retParameters setObject: retObj forKey: @"return"];
     }];
 

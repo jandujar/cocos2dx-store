@@ -12,10 +12,8 @@
 soomla::CCVirtualItemReward *soomla::CCVirtualItemReward::create(
         cocos2d::CCString *rewardId,
         cocos2d::CCString *name,
-        cocos2d::CCBool *repeatable,
         cocos2d::CCInteger *amount,
-        cocos2d::CCString *associatedItemId
-) {
+        cocos2d::CCString *associatedItemId) {
 
     CCVirtualItemReward *ret = new CCVirtualItemReward();
     if (ret->init(rewardId, name, associatedItemId, amount)) {

@@ -24,10 +24,6 @@ namespace soomla {
         return s_SharedInstance;
     }
 
-    void CCStoreEventDispatcher::proceedEventBillingSupport(CCDictionary *paramaters) {
-        this->onBillingNotSupported();
-    }
-
 
     bool CCStoreEventDispatcher::init() {
 

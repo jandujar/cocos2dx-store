@@ -24,7 +24,6 @@ namespace soomla {
     char const *CCStoreConsts::JSON_STORE_CURRENCY_PACKS = "currencyPacks";
     char const *CCStoreConsts::JSON_STORE_GOODS = "goods";
     char const *CCStoreConsts::JSON_STORE_CATEGORIES = "categories";
-    char const *CCStoreConsts::JSON_STORE_NON_CONSUMABLES = "nonConsumables";
     char const *CCStoreConsts::JSON_STORE_GOODS_SU = "singleUse";
     char const *CCStoreConsts::JSON_STORE_GOODS_PA = "goodPacks";
     char const *CCStoreConsts::JSON_STORE_GOODS_UP = "goodUpgrades";
@@ -73,17 +72,16 @@ namespace soomla {
     char const *CCStoreConsts::JSON_AMOUNT = "amount";
     char const *CCStoreConsts::JSON_ASSOCIATED_ITEM_ID = "associatedItemId";
 
-    char const *CCStoreConsts::JSON_JSON_TYPE_MARKET_ITEM = "marketItem";
-    char const *CCStoreConsts::JSON_JSON_TYPE_NON_CONSUMABLE_ITEM = "nonConsumableItem";
-    char const *CCStoreConsts::JSON_JSON_TYPE_VIRTUAL_CATEGORY = "virtualCategory";
-    char const *CCStoreConsts::JSON_JSON_TYPE_VIRTUAL_CURRENCY = "virtualCurrency";
-    char const *CCStoreConsts::JSON_JSON_TYPE_VIRTUAL_CURRENCY_PACK = "virtualCurrencyPack";
-    char const *CCStoreConsts::JSON_JSON_TYPE_EQUIPPABLE_VG = "equippableVG";
-    char const *CCStoreConsts::JSON_JSON_TYPE_LIFETIME_VG = "lifetimeVG";
-    char const *CCStoreConsts::JSON_JSON_TYPE_SINGLE_USE_PACK_VG = "singleUsePackVG";
-    char const *CCStoreConsts::JSON_JSON_TYPE_SINGLE_USE_VG = "singleUseVG";
-    char const *CCStoreConsts::JSON_JSON_TYPE_UPGRADE_VG = "upgradeVG";
-    char const *CCStoreConsts::JSON_JSON_TYPE_ITEM = "item";
+    char const *CCStoreConsts::JSON_JSON_TYPE_MARKET_ITEM = "MarketItem";
+    char const *CCStoreConsts::JSON_JSON_TYPE_VIRTUAL_CATEGORY = "VirtualCategory";
+    char const *CCStoreConsts::JSON_JSON_TYPE_VIRTUAL_CURRENCY = "VirtualCurrency";
+    char const *CCStoreConsts::JSON_JSON_TYPE_VIRTUAL_CURRENCY_PACK = "VirtualCurrencyPack";
+    char const *CCStoreConsts::JSON_JSON_TYPE_EQUIPPABLE_VG = "EquippableVG";
+    char const *CCStoreConsts::JSON_JSON_TYPE_LIFETIME_VG = "LifetimeVG";
+    char const *CCStoreConsts::JSON_JSON_TYPE_SINGLE_USE_PACK_VG = "SingleUsePackVG";
+    char const *CCStoreConsts::JSON_JSON_TYPE_SINGLE_USE_VG = "SingleUseVG";
+    char const *CCStoreConsts::JSON_JSON_TYPE_UPGRADE_VG = "UpgradeVG";
+    char const *CCStoreConsts::JSON_JSON_TYPE_ITEM = "VirtualItemReward";
 
     char const *CCStoreConsts::EVENT_BILLING_NOT_SUPPORTED = "CCStoreEventHandler::onBillingNotSupported";
     char const *CCStoreConsts::EVENT_BILLING_SUPPORTED = "CCStoreEventHandler::onBillingSupported";

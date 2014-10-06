@@ -13,7 +13,6 @@
 #import "UpgradeVG.h"
 #import "SingleUsePackVG.h"
 #import "VirtualCategory.h"
-#import "NonConsumableItem.h"
 #import "StoreJSONConsts.h"
 
 
@@ -94,14 +93,6 @@ static NSString* TAG = @"SOOMLA StoreAssets";
         }
         virtualCategoriesArray = categories;
 
-        NSMutableArray* nonConsumables = [[NSMutableArray alloc] init];
-        NSArray* nonConsumableItemsDict = [storeInfo objectForKey:JSON_STORE_NONCONSUMABLES];
-        for(NSDictionary* nonConsumableItemDict in nonConsumableItemsDict){
-            NonConsumableItem* non = [[NonConsumableItem alloc] initWithDictionary:nonConsumableItemDict];
-            [nonConsumables addObject:non];
-        }
-        nonConsumablesArray = nonConsumables;
-
         return YES;
     } @catch (NSException* ex) {
         LogError(TAG, @"An error occured while trying to parse store assets JSON.");
@@ -130,16 +121,11 @@ static NSString* TAG = @"SOOMLA StoreAssets";
     return virtualCategoriesArray;
 }
 
-- (NSArray*)nonConsumableItems {
-    return nonConsumablesArray;
-}
-
 - (void)dealloc {
     [virtualCurrenciesArray release];
     [virtualGoodsArray release];
     [virtualCurrencyPacksArray release];
     [virtualCategoriesArray release];
-    [nonConsumablesArray release];
     [super dealloc];
 }
 @end

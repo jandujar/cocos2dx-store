@@ -7,7 +7,6 @@
 #include "CCStoreAssets.h"
 #include "CCLifetimeVG.h"
 #include "CCMarketItem.h"
-#include "CCNonConsumableItem.h"
 #include "CCPurchasableVirtualItem.h"
 #include "CCPurchaseType.h"
 #include "CCPurchaseWithMarket.h"

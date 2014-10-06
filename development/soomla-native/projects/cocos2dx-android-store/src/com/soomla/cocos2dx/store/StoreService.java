@@ -58,7 +58,6 @@ public class StoreService extends AbstractSoomlaService {
         storeEventHandlerBridge = new StoreEventHandlerBridge();
 
         DomainHelper.getInstance().registerTypeWithClassName(StoreConsts.JSON_JSON_TYPE_MARKET_ITEM, MarketItem.class);
-        DomainHelper.getInstance().registerTypeWithClassName(StoreConsts.JSON_JSON_TYPE_NON_CONSUMABLE_ITEM, NonConsumableItem.class);
         DomainHelper.getInstance().registerTypeWithClassName(StoreConsts.JSON_JSON_TYPE_VIRTUAL_CATEGORY, VirtualCategory.class);
         DomainHelper.getInstance().registerTypeWithClassName(StoreConsts.JSON_JSON_TYPE_VIRTUAL_CURRENCY, VirtualCurrency.class);
         DomainHelper.getInstance().registerTypeWithClassName(StoreConsts.JSON_JSON_TYPE_VIRTUAL_CURRENCY_PACK, VirtualCurrencyPack.class);
@@ -286,34 +285,6 @@ public class StoreService extends AbstractSoomlaService {
             }
         });
 
-        ndkGlue.registerCallHandler("CCStoreInventory::nonConsumableItemExists", new NdkGlue.CallHandler() {
-            @Override
-            public void handle(JSONObject params, JSONObject retParams) throws Exception {
-                String nonConsItemId = params.getString("nonConsItemId");
-                SoomlaUtils.LogDebug("SOOMLA", "nonConsumableItemExists is called from java!");
-                boolean retValue = StoreInventory.nonConsumableItemExists(nonConsItemId);
-                retParams.put("return", retValue);
-            }
-        });
-
-        ndkGlue.registerCallHandler("CCStoreInventory::addNonConsumableItem", new NdkGlue.CallHandler() {
-            @Override
-            public void handle(JSONObject params, JSONObject retParams) throws Exception {
-                String nonConsItemId = params.getString("nonConsItemId");
-                SoomlaUtils.LogDebug("SOOMLA", "addNonConsumableItem is called from java!");
-                StoreInventory.addNonConsumableItem(nonConsItemId);
-            }
-        });
-
-        ndkGlue.registerCallHandler("CCStoreInventory::removeNonConsumableItem", new NdkGlue.CallHandler() {
-            @Override
-            public void handle(JSONObject params, JSONObject retParams) throws Exception {
-                String nonConsItemId = params.getString("nonConsItemId");
-                SoomlaUtils.LogDebug("SOOMLA", "removeNonConsumableItem is called from java!");
-                StoreInventory.removeNonConsumableItem(nonConsItemId);
-            }
-        });
-
         ndkGlue.registerCallHandler("CCStoreInfo::getItemByItemId", new NdkGlue.CallHandler() {
             @Override
             public void handle(JSONObject params, JSONObject retParams) throws Exception {
@@ -406,19 +377,6 @@ public class StoreService extends AbstractSoomlaService {
                 List<VirtualCurrencyPack> virtualCurrencyPacks = StoreInfo.getCurrencyPacks();
                 for (VirtualCurrencyPack virtualCurrencyPack : virtualCurrencyPacks) {
                     ret.add(DomainHelper.getInstance().domainToJsonObject(virtualCurrencyPack));
-                }
-                JSONArray retValue = new JSONArray(ret);
-                retParams.put("return", retValue);
-            }
-        });
-
-        ndkGlue.registerCallHandler("CCStoreInfo::getNonConsumableItems", new NdkGlue.CallHandler() {
-            @Override
-            public void handle(JSONObject params, JSONObject retParams) throws Exception {
-                List<JSONObject> ret = new ArrayList<JSONObject>();
-                List<NonConsumableItem> nonConsumableItems = StoreInfo.getNonConsumableItems();
-                for (NonConsumableItem nonConsumableItem : nonConsumableItems) {
-                    ret.add(DomainHelper.getInstance().domainToJsonObject(nonConsumableItem));
                 }
                 JSONArray retValue = new JSONArray(ret);
                 retParams.put("return", retValue);

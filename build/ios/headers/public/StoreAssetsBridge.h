@@ -12,7 +12,6 @@
     NSMutableArray* virtualGoodsArray;
     NSMutableArray* virtualCurrencyPacksArray;
     NSMutableArray* virtualCategoriesArray;
-    NSMutableArray* nonConsumablesArray;
 }
 
 + (StoreAssetsBridge *)sharedInstance;

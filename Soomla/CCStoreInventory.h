@@ -179,32 +179,6 @@ namespace soomla {
          */
 		void removeGoodUpgrades(const char *goodItemId, CCError **error);
 
-		/**
-         Checks if the item with the given `itemId` exists in 
-         `nonConsumableStorage`.
-         @param itemId The id of the item to check if exists.
-         @param error A `CCError` for error checking.
-         @return True if the item with the given id exists in
-                `nonConsumableStorage`, false otherwise.
-         */
-        bool nonConsumableItemExists(const char *nonConsItemId, CCError **error);
-
-		/**
-         Adds the non-consumable item with the given itemId to 
-         `nonConsumableStorage`.
-         @param itemId The id of the item to add to the storage.
-         @param error A `CCError` for error checking.
-         */
-        void addNonConsumableItem(const char *nonConsItemId, CCError **error);
-
-		/**
-         Removes the non-consumable item with the given `itemId` from
-         `nonConsumableStorage`.
-         @param itemId The id of the item to remove from the storage.
-         @param error A `CCError` for error checking.
-         */
-        void removeNonConsumableItem(const char *nonConsItemId, CCError **error);
-
         int getItemBalance(char const *itemId, char const *payload, CCError **error);
     };
 };

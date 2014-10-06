@@ -82,12 +82,6 @@ namespace soomla {
         @return All virtual categories in your game.
         */
         virtual cocos2d::CCArray *getCategories() = 0;
-
-		/**
-        Retrieves the array of all non-consumable items served by your store.
-        @return All non-consumables served in your game.
-        */
-        virtual cocos2d::CCArray *getNonConsumableItems() = 0;
     };
 };
 

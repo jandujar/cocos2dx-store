@@ -30,7 +30,6 @@ namespace soomla {
         static char const *JSON_STORE_CURRENCY_PACKS;
         static char const *JSON_STORE_GOODS;
         static char const *JSON_STORE_CATEGORIES;
-        static char const *JSON_STORE_NON_CONSUMABLES;
         static char const *JSON_STORE_GOODS_SU;
         static char const *JSON_STORE_GOODS_PA;
         static char const *JSON_STORE_GOODS_UP;
@@ -80,7 +79,6 @@ namespace soomla {
         static char const *JSON_ASSOCIATED_ITEM_ID;
 
         static char const *JSON_JSON_TYPE_MARKET_ITEM;
-        static char const *JSON_JSON_TYPE_NON_CONSUMABLE_ITEM;
         static char const *JSON_JSON_TYPE_VIRTUAL_CATEGORY;
         static char const *JSON_JSON_TYPE_VIRTUAL_CURRENCY;
         static char const *JSON_JSON_TYPE_VIRTUAL_CURRENCY_PACK;

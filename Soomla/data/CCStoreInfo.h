@@ -131,12 +131,6 @@ namespace soomla {
         cocos2d::CCArray *getVirtualCurrencyPacks();
 
 		/**
-         Retrieves all non consumable items.
-         @return The non consumable items of the game.
-		*/
-        cocos2d::CCArray *getNonConsumableItems();
-
-		/**
          Retrieves all virtual categories.
          @return The virtual categories of the game.
 		*/

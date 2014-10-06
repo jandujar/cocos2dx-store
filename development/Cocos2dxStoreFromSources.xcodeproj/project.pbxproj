@@ -7,6 +7,128 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D4A720219DAAA1A0033DC46 /* CCPurchaseType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D0EA19B1BFE30054EA87 /* CCPurchaseType.cpp */; };
+		9D4A720319DAAA1A0033DC46 /* CCStoreEventDispatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D0BC19B1BFE30054EA87 /* CCStoreEventDispatcher.cpp */; };
+		9D4A720419DAAA1A0033DC46 /* SoomlaVerification.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D17719B1C13F0054EA87 /* SoomlaVerification.m */; };
+		9D4A720519DAAA1A0033DC46 /* VirtualItemReward.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D17219B1C13F0054EA87 /* VirtualItemReward.m */; };
+		9D4A720619DAAA1A0033DC46 /* CCVirtualCategory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D0CE19B1BFE30054EA87 /* CCVirtualCategory.cpp */; };
+		9D4A720719DAAA1A0033DC46 /* CCStoreService.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D0C119B1BFE30054EA87 /* CCStoreService.cpp */; };
+		9D4A720819DAAA1A0033DC46 /* UpgradeVG.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D15C19B1C13F0054EA87 /* UpgradeVG.m */; };
+		9D4A720919DAAA1A0033DC46 /* NonConsumableStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D13719B1C13F0054EA87 /* NonConsumableStorage.m */; };
+		9D4A720A19DAAA1A0033DC46 /* CCUpgradeVG.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D0E019B1BFE30054EA87 /* CCUpgradeVG.cpp */; };
+		9D4A720B19DAAA1A0033DC46 /* CCVirtualCurrency.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D0D319B1BFE30054EA87 /* CCVirtualCurrency.cpp */; };
+		9D4A720C19DAAA1A0033DC46 /* CCStoreInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D0C519B1BFE30054EA87 /* CCStoreInfo.cpp */; };
+		9D4A720D19DAAA1A0033DC46 /* CCNonConsumableItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D0CA19B1BFE30054EA87 /* CCNonConsumableItem.cpp */; };
+		9D4A720E19DAAA1A0033DC46 /* StoreService.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D12F19B1C0C40054EA87 /* StoreService.mm */; };
+		9D4A720F19DAAA1A0033DC46 /* CCVirtualCurrencyPack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D0D519B1BFE30054EA87 /* CCVirtualCurrencyPack.cpp */; };
+		9D4A721019DAAA1A0033DC46 /* CCPurchaseWithMarket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D0EC19B1BFE30054EA87 /* CCPurchaseWithMarket.cpp */; };
+		9D4A721119DAAA1A0033DC46 /* CCEquippableVG.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D0D819B1BFE30054EA87 /* CCEquippableVG.cpp */; };
+		9D4A721219DAAA1A0033DC46 /* CCSimpleStoreEventHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D0B519B1BFE30054EA87 /* CCSimpleStoreEventHandler.cpp */; };
+		9D4A721319DAAA1A0033DC46 /* VirtualItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D16019B1C13F0054EA87 /* VirtualItem.m */; };
+		9D4A721419DAAA1A0033DC46 /* CCSoomlaStore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D0B719B1BFE30054EA87 /* CCSoomlaStore.cpp */; };
+		9D4A721519DAAA1A0033DC46 /* StoreInventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D17D19B1C13F0054EA87 /* StoreInventory.m */; };
+		9D4A721619DAAA1A0033DC46 /* InsufficientFundsException.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D16319B1C13F0054EA87 /* InsufficientFundsException.m */; };
+		9D4A721719DAAA1A0033DC46 /* StorageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D13919B1C13F0054EA87 /* StorageManager.m */; };
+		9D4A721819DAAA1A0033DC46 /* CCLifetimeVG.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D0DA19B1BFE30054EA87 /* CCLifetimeVG.cpp */; };
+		9D4A721919DAAA1A0033DC46 /* LifetimeVG.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D15619B1C13F0054EA87 /* LifetimeVG.m */; };
+		9D4A721A19DAAA1A0033DC46 /* CCPurchaseWithVirtualItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D0EE19B1BFE30054EA87 /* CCPurchaseWithVirtualItem.cpp */; };
+		9D4A721B19DAAA1A0033DC46 /* SingleUsePackVG.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D15819B1C13F0054EA87 /* SingleUsePackVG.m */; };
+		9D4A721C19DAAA1A0033DC46 /* StoreConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D17919B1C13F0054EA87 /* StoreConfig.m */; };
+		9D4A721D19DAAA1A0033DC46 /* VirtualGoodStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D14119B1C13F0054EA87 /* VirtualGoodStorage.m */; };
+		9D4A721E19DAAA1A0033DC46 /* PurchaseWithMarket.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D16D19B1C13F0054EA87 /* PurchaseWithMarket.m */; };
+		9D4A721F19DAAA1A0033DC46 /* PurchasableVirtualItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D14A19B1C13F0054EA87 /* PurchasableVirtualItem.m */; };
+		9D4A722019DAAA1A0033DC46 /* StoreInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D13B19B1C13F0054EA87 /* StoreInfo.m */; };
+		9D4A722119DAAA1A0033DC46 /* CCVirtualItemReward.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D0F119B1BFE30054EA87 /* CCVirtualItemReward.cpp */; };
+		9D4A722219DAAA1A0033DC46 /* VirtualItemNotFoundException.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D16719B1C13F0054EA87 /* VirtualItemNotFoundException.m */; };
+		9D4A722319DAAA1A0033DC46 /* NonConsumableItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D14819B1C13F0054EA87 /* NonConsumableItem.m */; };
+		9D4A722419DAAA1A0033DC46 /* CCStoreConsts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D0BA19B1BFE30054EA87 /* CCStoreConsts.cpp */; };
+		9D4A722519DAAA1A0033DC46 /* CCPurchasableVirtualItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D0CC19B1BFE30054EA87 /* CCPurchasableVirtualItem.cpp */; };
+		9D4A722619DAAA1A0033DC46 /* VirtualCurrency.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D14F19B1C13F0054EA87 /* VirtualCurrency.m */; };
+		9D4A722719DAAA1A0033DC46 /* StoreJSONConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D13D19B1C13F0054EA87 /* StoreJSONConsts.m */; };
+		9D4A722819DAAA1A0033DC46 /* SoomlaStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D17519B1C13F0054EA87 /* SoomlaStore.m */; };
+		9D4A722919DAAA1A0033DC46 /* CCStoreInventory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D0BF19B1BFE30054EA87 /* CCStoreInventory.cpp */; };
+		9D4A722A19DAAA1A0033DC46 /* VirtualGood.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D15E19B1C13F0054EA87 /* VirtualGood.m */; };
+		9D4A722B19DAAA1A0033DC46 /* VirtualCurrencyStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D13F19B1C13F0054EA87 /* VirtualCurrencyStorage.m */; };
+		9D4A722C19DAAA1A0033DC46 /* EquippableVG.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D15419B1C13F0054EA87 /* EquippableVG.m */; };
+		9D4A722D19DAAA1A0033DC46 /* CCSingleUsePackVG.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D0DC19B1BFE30054EA87 /* CCSingleUsePackVG.cpp */; };
+		9D4A722E19DAAA1A0033DC46 /* CCVirtualItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D0D019B1BFE30054EA87 /* CCVirtualItem.cpp */; };
+		9D4A722F19DAAA1A0033DC46 /* CCSingleUseVG.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D0DE19B1BFE30054EA87 /* CCSingleUseVG.cpp */; };
+		9D4A723019DAAA1A0033DC46 /* NotEnoughGoodsException.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D16519B1C13F0054EA87 /* NotEnoughGoodsException.m */; };
+		9D4A723119DAAA1A0033DC46 /* SingleUseVG.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D15A19B1C13F0054EA87 /* SingleUseVG.m */; };
+		9D4A723219DAAA1A0033DC46 /* MarketItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D14619B1C13F0054EA87 /* MarketItem.m */; };
+		9D4A723319DAAA1A0033DC46 /* StoreAssetsBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D12D19B1C0C40054EA87 /* StoreAssetsBridge.mm */; };
+		9D4A723419DAAA1A0033DC46 /* CCVirtualGood.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D0E219B1BFE30054EA87 /* CCVirtualGood.cpp */; };
+		9D4A723519DAAA1A0033DC46 /* PurchaseWithVirtualItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D16F19B1C13F0054EA87 /* PurchaseWithVirtualItem.m */; };
+		9D4A723619DAAA1A0033DC46 /* VirtualItemStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D14319B1C13F0054EA87 /* VirtualItemStorage.m */; };
+		9D4A723719DAAA1A0033DC46 /* VirtualCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D14C19B1C13F0054EA87 /* VirtualCategory.m */; };
+		9D4A723819DAAA1A0033DC46 /* PurchaseType.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D16B19B1C13F0054EA87 /* PurchaseType.m */; };
+		9D4A723919DAAA1A0033DC46 /* StoreEventHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D17B19B1C13F0054EA87 /* StoreEventHandling.m */; };
+		9D4A723A19DAAA1A0033DC46 /* VirtualCurrencyPack.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D15119B1C13F0054EA87 /* VirtualCurrencyPack.m */; };
+		9D4A723B19DAAA1A0033DC46 /* CCMarketItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D0C819B1BFE30054EA87 /* CCMarketItem.cpp */; };
+		9D4A723D19DAAA1A0033DC46 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B3C5F2168C6D0C00161FAA /* Foundation.framework */; };
+		9D4A723F19DAAA1A0033DC46 /* CCUpgradeVG.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0E119B1BFE30054EA87 /* CCUpgradeVG.h */; };
+		9D4A724019DAAA1A0033DC46 /* CCVirtualCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0CF19B1BFE30054EA87 /* CCVirtualCategory.h */; };
+		9D4A724119DAAA1A0033DC46 /* CCVirtualGood.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0E319B1BFE30054EA87 /* CCVirtualGood.h */; };
+		9D4A724219DAAA1A0033DC46 /* SingleUsePackVG.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D15719B1C13F0054EA87 /* SingleUsePackVG.h */; };
+		9D4A724319DAAA1A0033DC46 /* CCNonConsumableItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0CB19B1BFE30054EA87 /* CCNonConsumableItem.h */; };
+		9D4A724419DAAA1A0033DC46 /* EquippableVG.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D15319B1C13F0054EA87 /* EquippableVG.h */; };
+		9D4A724519DAAA1A0033DC46 /* VirtualCurrency.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D14E19B1C13F0054EA87 /* VirtualCurrency.h */; };
+		9D4A724619DAAA1A0033DC46 /* CCVirtualItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0D119B1BFE30054EA87 /* CCVirtualItem.h */; };
+		9D4A724719DAAA1A0033DC46 /* CCStoreEventDispatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0BD19B1BFE30054EA87 /* CCStoreEventDispatcher.h */; };
+		9D4A724819DAAA1A0033DC46 /* NotEnoughGoodsException.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D16419B1C13F0054EA87 /* NotEnoughGoodsException.h */; };
+		9D4A724919DAAA1A0033DC46 /* CCSingleUsePackVG.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0DD19B1BFE30054EA87 /* CCSingleUsePackVG.h */; };
+		9D4A724A19DAAA1A0033DC46 /* NonConsumableStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D13619B1C13F0054EA87 /* NonConsumableStorage.h */; };
+		9D4A724B19DAAA1A0033DC46 /* CCStoreEventHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0BE19B1BFE30054EA87 /* CCStoreEventHandler.h */; };
+		9D4A724C19DAAA1A0033DC46 /* CCPurchaseType.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0EB19B1BFE30054EA87 /* CCPurchaseType.h */; };
+		9D4A724D19DAAA1A0033DC46 /* NonConsumableItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D14719B1C13F0054EA87 /* NonConsumableItem.h */; };
+		9D4A724E19DAAA1A0033DC46 /* VirtualItemStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D14219B1C13F0054EA87 /* VirtualItemStorage.h */; };
+		9D4A724F19DAAA1A0033DC46 /* SoomlaVerification.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D17619B1C13F0054EA87 /* SoomlaVerification.h */; };
+		9D4A725019DAAA1A0033DC46 /* StoreJSONConsts.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D13C19B1C13F0054EA87 /* StoreJSONConsts.h */; };
+		9D4A725119DAAA1A0033DC46 /* StoreAssetsBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D12C19B1C0C40054EA87 /* StoreAssetsBridge.h */; };
+		9D4A725219DAAA1A0033DC46 /* PurchaseType.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D16A19B1C13F0054EA87 /* PurchaseType.h */; };
+		9D4A725319DAAA1A0033DC46 /* StoreInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D13A19B1C13F0054EA87 /* StoreInfo.h */; };
+		9D4A725419DAAA1A0033DC46 /* CCPurchasableVirtualItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0CD19B1BFE30054EA87 /* CCPurchasableVirtualItem.h */; };
+		9D4A725519DAAA1A0033DC46 /* VirtualItemNotFoundException.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D16619B1C13F0054EA87 /* VirtualItemNotFoundException.h */; };
+		9D4A725619DAAA1A0033DC46 /* VirtualGoodStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D14019B1C13F0054EA87 /* VirtualGoodStorage.h */; };
+		9D4A725719DAAA1A0033DC46 /* PurchasableVirtualItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D14919B1C13F0054EA87 /* PurchasableVirtualItem.h */; };
+		9D4A725819DAAA1A0033DC46 /* CCStoreService.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0C219B1BFE30054EA87 /* CCStoreService.h */; };
+		9D4A725919DAAA1A0033DC46 /* VirtualItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D15F19B1C13F0054EA87 /* VirtualItem.h */; };
+		9D4A725A19DAAA1A0033DC46 /* CCStoreAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0B919B1BFE30054EA87 /* CCStoreAssets.h */; };
+		9D4A725B19DAAA1A0033DC46 /* InsufficientFundsException.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D16219B1C13F0054EA87 /* InsufficientFundsException.h */; };
+		9D4A725C19DAAA1A0033DC46 /* SingleUseVG.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D15919B1C13F0054EA87 /* SingleUseVG.h */; };
+		9D4A725D19DAAA1A0033DC46 /* LifetimeVG.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D15519B1C13F0054EA87 /* LifetimeVG.h */; };
+		9D4A725E19DAAA1A0033DC46 /* VirtualCurrencyPack.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D15019B1C13F0054EA87 /* VirtualCurrencyPack.h */; };
+		9D4A725F19DAAA1A0033DC46 /* CCSingleUseVG.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0DF19B1BFE30054EA87 /* CCSingleUseVG.h */; };
+		9D4A726019DAAA1A0033DC46 /* CCVirtualItemReward.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0F219B1BFE30054EA87 /* CCVirtualItemReward.h */; };
+		9D4A726119DAAA1A0033DC46 /* MarketItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D14519B1C13F0054EA87 /* MarketItem.h */; };
+		9D4A726219DAAA1A0033DC46 /* CCEquippableVG.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0D919B1BFE30054EA87 /* CCEquippableVG.h */; };
+		9D4A726319DAAA1A0033DC46 /* CCStoreInventory.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0C019B1BFE30054EA87 /* CCStoreInventory.h */; };
+		9D4A726419DAAA1A0033DC46 /* CCLifetimeVG.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0DB19B1BFE30054EA87 /* CCLifetimeVG.h */; };
+		9D4A726519DAAA1A0033DC46 /* CCPurchaseWithMarket.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0ED19B1BFE30054EA87 /* CCPurchaseWithMarket.h */; };
+		9D4A726619DAAA1A0033DC46 /* CCVirtualCurrency.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0D419B1BFE30054EA87 /* CCVirtualCurrency.h */; };
+		9D4A726719DAAA1A0033DC46 /* VirtualGood.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D15D19B1C13F0054EA87 /* VirtualGood.h */; };
+		9D4A726819DAAA1A0033DC46 /* Cocos2dxStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0C319B1BFE30054EA87 /* Cocos2dxStore.h */; };
+		9D4A726919DAAA1A0033DC46 /* StoreInventory.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D17C19B1C13F0054EA87 /* StoreInventory.h */; };
+		9D4A726A19DAAA1A0033DC46 /* IStoreAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D16819B1C13F0054EA87 /* IStoreAssets.h */; };
+		9D4A726B19DAAA1A0033DC46 /* CCStoreConsts.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0BB19B1BFE30054EA87 /* CCStoreConsts.h */; };
+		9D4A726C19DAAA1A0033DC46 /* StorageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D13819B1C13F0054EA87 /* StorageManager.h */; };
+		9D4A726D19DAAA1A0033DC46 /* CCMarketItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0C919B1BFE30054EA87 /* CCMarketItem.h */; };
+		9D4A726E19DAAA1A0033DC46 /* PurchaseWithMarket.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D16C19B1C13F0054EA87 /* PurchaseWithMarket.h */; };
+		9D4A726F19DAAA1A0033DC46 /* VirtualCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D14B19B1C13F0054EA87 /* VirtualCategory.h */; };
+		9D4A727019DAAA1A0033DC46 /* VirtualCurrencyStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D13E19B1C13F0054EA87 /* VirtualCurrencyStorage.h */; };
+		9D4A727119DAAA1A0033DC46 /* CCSoomlaStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0B819B1BFE30054EA87 /* CCSoomlaStore.h */; };
+		9D4A727219DAAA1A0033DC46 /* CCSimpleStoreEventHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0B619B1BFE30054EA87 /* CCSimpleStoreEventHandler.h */; };
+		9D4A727319DAAA1A0033DC46 /* StoreService.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D12E19B1C0C40054EA87 /* StoreService.h */; };
+		9D4A727419DAAA1A0033DC46 /* CCStoreInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0C619B1BFE30054EA87 /* CCStoreInfo.h */; };
+		9D4A727519DAAA1A0033DC46 /* VirtualItemReward.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D17119B1C13F0054EA87 /* VirtualItemReward.h */; };
+		9D4A727619DAAA1A0033DC46 /* StoreConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D17819B1C13F0054EA87 /* StoreConfig.h */; };
+		9D4A727719DAAA1A0033DC46 /* StoreEventHandling.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D17A19B1C13F0054EA87 /* StoreEventHandling.h */; };
+		9D4A727819DAAA1A0033DC46 /* CCPurchaseWithVirtualItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0EF19B1BFE30054EA87 /* CCPurchaseWithVirtualItem.h */; };
+		9D4A727919DAAA1A0033DC46 /* CCVirtualCurrencyPack.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0D619B1BFE30054EA87 /* CCVirtualCurrencyPack.h */; };
+		9D4A727A19DAAA1A0033DC46 /* SoomlaiOSStore-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D17319B1C13F0054EA87 /* SoomlaiOSStore-Prefix.pch */; };
+		9D4A727B19DAAA1A0033DC46 /* SoomlaStore.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D17419B1C13F0054EA87 /* SoomlaStore.h */; };
+		9D4A727C19DAAA1A0033DC46 /* PurchaseWithVirtualItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D16E19B1C13F0054EA87 /* PurchaseWithVirtualItem.h */; };
+		9D4A727D19DAAA1A0033DC46 /* UpgradeVG.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D15B19B1C13F0054EA87 /* UpgradeVG.h */; };
 		9D63D0F319B1BFE30054EA87 /* CCSimpleStoreEventHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D0B519B1BFE30054EA87 /* CCSimpleStoreEventHandler.cpp */; };
 		9D63D0F419B1BFE30054EA87 /* CCSimpleStoreEventHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0B619B1BFE30054EA87 /* CCSimpleStoreEventHandler.h */; };
 		9D63D0F519B1BFE30054EA87 /* CCSoomlaStore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D0B719B1BFE30054EA87 /* CCSoomlaStore.cpp */; };
@@ -26,8 +148,6 @@
 		9D63D10319B1BFE30054EA87 /* CCStoreInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0C619B1BFE30054EA87 /* CCStoreInfo.h */; };
 		9D63D10419B1BFE30054EA87 /* CCMarketItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D0C819B1BFE30054EA87 /* CCMarketItem.cpp */; };
 		9D63D10519B1BFE30054EA87 /* CCMarketItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0C919B1BFE30054EA87 /* CCMarketItem.h */; };
-		9D63D10619B1BFE30054EA87 /* CCNonConsumableItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D0CA19B1BFE30054EA87 /* CCNonConsumableItem.cpp */; };
-		9D63D10719B1BFE30054EA87 /* CCNonConsumableItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0CB19B1BFE30054EA87 /* CCNonConsumableItem.h */; };
 		9D63D10819B1BFE30054EA87 /* CCPurchasableVirtualItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D0CC19B1BFE30054EA87 /* CCPurchasableVirtualItem.cpp */; };
 		9D63D10919B1BFE30054EA87 /* CCPurchasableVirtualItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0CD19B1BFE30054EA87 /* CCPurchasableVirtualItem.h */; };
 		9D63D10A19B1BFE30054EA87 /* CCVirtualCategory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D0CE19B1BFE30054EA87 /* CCVirtualCategory.cpp */; };
@@ -50,10 +170,6 @@
 		9D63D11B19B1BFE30054EA87 /* CCUpgradeVG.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0E119B1BFE30054EA87 /* CCUpgradeVG.h */; };
 		9D63D11C19B1BFE30054EA87 /* CCVirtualGood.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D0E219B1BFE30054EA87 /* CCVirtualGood.cpp */; };
 		9D63D11D19B1BFE30054EA87 /* CCVirtualGood.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0E319B1BFE30054EA87 /* CCVirtualGood.h */; };
-		9D63D11E19B1BFE30054EA87 /* jsb_soomla.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D0E519B1BFE30054EA87 /* jsb_soomla.cpp */; };
-		9D63D11F19B1BFE30054EA87 /* jsb_soomla.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0E619B1BFE30054EA87 /* jsb_soomla.h */; };
-		9D63D12019B1BFE30054EA87 /* JSBinding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D0E719B1BFE30054EA87 /* JSBinding.cpp */; };
-		9D63D12119B1BFE30054EA87 /* JSBinding.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0E819B1BFE30054EA87 /* JSBinding.h */; };
 		9D63D12219B1BFE30054EA87 /* CCPurchaseType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D0EA19B1BFE30054EA87 /* CCPurchaseType.cpp */; };
 		9D63D12319B1BFE30054EA87 /* CCPurchaseType.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D0EB19B1BFE30054EA87 /* CCPurchaseType.h */; };
 		9D63D12419B1BFE30054EA87 /* CCPurchaseWithMarket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D0EC19B1BFE30054EA87 /* CCPurchaseWithMarket.cpp */; };
@@ -67,7 +183,6 @@
 		9D63D13219B1C0C40054EA87 /* StoreService.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D12E19B1C0C40054EA87 /* StoreService.h */; };
 		9D63D13319B1C0C40054EA87 /* StoreService.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D12F19B1C0C40054EA87 /* StoreService.mm */; };
 		9D63D17E19B1C13F0054EA87 /* NonConsumableStorage.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D13619B1C13F0054EA87 /* NonConsumableStorage.h */; };
-		9D63D17F19B1C13F0054EA87 /* NonConsumableStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D13719B1C13F0054EA87 /* NonConsumableStorage.m */; };
 		9D63D18019B1C13F0054EA87 /* StorageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D13819B1C13F0054EA87 /* StorageManager.h */; };
 		9D63D18119B1C13F0054EA87 /* StorageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D13919B1C13F0054EA87 /* StorageManager.m */; };
 		9D63D18219B1C13F0054EA87 /* StoreInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D13A19B1C13F0054EA87 /* StoreInfo.h */; };
@@ -83,7 +198,6 @@
 		9D63D18C19B1C13F0054EA87 /* MarketItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D14519B1C13F0054EA87 /* MarketItem.h */; };
 		9D63D18D19B1C13F0054EA87 /* MarketItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D14619B1C13F0054EA87 /* MarketItem.m */; };
 		9D63D18E19B1C13F0054EA87 /* NonConsumableItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D14719B1C13F0054EA87 /* NonConsumableItem.h */; };
-		9D63D18F19B1C13F0054EA87 /* NonConsumableItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D14819B1C13F0054EA87 /* NonConsumableItem.m */; };
 		9D63D19019B1C13F0054EA87 /* PurchasableVirtualItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D14919B1C13F0054EA87 /* PurchasableVirtualItem.h */; };
 		9D63D19119B1C13F0054EA87 /* PurchasableVirtualItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D14A19B1C13F0054EA87 /* PurchasableVirtualItem.m */; };
 		9D63D19219B1C13F0054EA87 /* VirtualCategory.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D14B19B1C13F0054EA87 /* VirtualCategory.h */; };
@@ -133,11 +247,14 @@
 		9D63D1BE19B1C13F0054EA87 /* StoreInventory.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D63D17C19B1C13F0054EA87 /* StoreInventory.h */; };
 		9D63D1BF19B1C13F0054EA87 /* StoreInventory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D63D17D19B1C13F0054EA87 /* StoreInventory.m */; };
 		C0B3C5F3168C6D0C00161FAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B3C5F2168C6D0C00161FAA /* Foundation.framework */; };
+		F820C00319DC4BDA0084BBA5 /* StoreTypeConsts.mm in Sources */ = {isa = PBXBuildFile; fileRef = F820C00219DC4BDA0084BBA5 /* StoreTypeConsts.mm */; };
+		F820C00519DC4C140084BBA5 /* StoreTypeConsts.h in Headers */ = {isa = PBXBuildFile; fileRef = F820C00419DC4C140084BBA5 /* StoreTypeConsts.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9D41016D1978D35200907FA8 /* libCocos2dXiOSCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libCocos2dXiOSCore.a; path = "soomla-native/compilations/ios/libCocos2dXiOSCore.a"; sourceTree = "<group>"; };
 		9D41016E1978D35200907FA8 /* libSoomlaiOSCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSoomlaiOSCore.a; path = "soomla-native/compilations/ios/libSoomlaiOSCore.a"; sourceTree = "<group>"; };
+		9D4A728119DAAA1A0033DC46 /* libCocos2dxStoreFromSourcesWithJsb.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCocos2dxStoreFromSourcesWithJsb.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D63D0B519B1BFE30054EA87 /* CCSimpleStoreEventHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCSimpleStoreEventHandler.cpp; sourceTree = "<group>"; };
 		9D63D0B619B1BFE30054EA87 /* CCSimpleStoreEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSimpleStoreEventHandler.h; sourceTree = "<group>"; };
 		9D63D0B719B1BFE30054EA87 /* CCSoomlaStore.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCSoomlaStore.cpp; sourceTree = "<group>"; };
@@ -157,8 +274,6 @@
 		9D63D0C619B1BFE30054EA87 /* CCStoreInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCStoreInfo.h; sourceTree = "<group>"; };
 		9D63D0C819B1BFE30054EA87 /* CCMarketItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCMarketItem.cpp; sourceTree = "<group>"; };
 		9D63D0C919B1BFE30054EA87 /* CCMarketItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCMarketItem.h; sourceTree = "<group>"; };
-		9D63D0CA19B1BFE30054EA87 /* CCNonConsumableItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCNonConsumableItem.cpp; sourceTree = "<group>"; };
-		9D63D0CB19B1BFE30054EA87 /* CCNonConsumableItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCNonConsumableItem.h; sourceTree = "<group>"; };
 		9D63D0CC19B1BFE30054EA87 /* CCPurchasableVirtualItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCPurchasableVirtualItem.cpp; sourceTree = "<group>"; };
 		9D63D0CD19B1BFE30054EA87 /* CCPurchasableVirtualItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPurchasableVirtualItem.h; sourceTree = "<group>"; };
 		9D63D0CE19B1BFE30054EA87 /* CCVirtualCategory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCVirtualCategory.cpp; sourceTree = "<group>"; };
@@ -181,10 +296,6 @@
 		9D63D0E119B1BFE30054EA87 /* CCUpgradeVG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCUpgradeVG.h; sourceTree = "<group>"; };
 		9D63D0E219B1BFE30054EA87 /* CCVirtualGood.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCVirtualGood.cpp; sourceTree = "<group>"; };
 		9D63D0E319B1BFE30054EA87 /* CCVirtualGood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCVirtualGood.h; sourceTree = "<group>"; };
-		9D63D0E519B1BFE30054EA87 /* jsb_soomla.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = jsb_soomla.cpp; sourceTree = "<group>"; };
-		9D63D0E619B1BFE30054EA87 /* jsb_soomla.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jsb_soomla.h; sourceTree = "<group>"; };
-		9D63D0E719B1BFE30054EA87 /* JSBinding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JSBinding.cpp; sourceTree = "<group>"; };
-		9D63D0E819B1BFE30054EA87 /* JSBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSBinding.h; sourceTree = "<group>"; };
 		9D63D0EA19B1BFE30054EA87 /* CCPurchaseType.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCPurchaseType.cpp; sourceTree = "<group>"; };
 		9D63D0EB19B1BFE30054EA87 /* CCPurchaseType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCPurchaseType.h; sourceTree = "<group>"; };
 		9D63D0EC19B1BFE30054EA87 /* CCPurchaseWithMarket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCPurchaseWithMarket.cpp; sourceTree = "<group>"; };
@@ -265,9 +376,19 @@
 		9D63D17D19B1C13F0054EA87 /* StoreInventory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreInventory.m; sourceTree = "<group>"; };
 		C0B3C5EF168C6D0C00161FAA /* libCocos2dxStoreFromSources.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCocos2dxStoreFromSources.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0B3C5F2168C6D0C00161FAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F820C00219DC4BDA0084BBA5 /* StoreTypeConsts.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = StoreTypeConsts.mm; sourceTree = "<group>"; };
+		F820C00419DC4C140084BBA5 /* StoreTypeConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreTypeConsts.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9D4A723C19DAAA1A0033DC46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D4A723D19DAAA1A0033DC46 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C0B3C5EC168C6D0C00161FAA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -299,7 +420,6 @@
 				9D63D0C319B1BFE30054EA87 /* Cocos2dxStore.h */,
 				9D63D0C419B1BFE30054EA87 /* data */,
 				9D63D0C719B1BFE30054EA87 /* domain */,
-				9D63D0E419B1BFE30054EA87 /* jsb */,
 				9D63D0E919B1BFE30054EA87 /* PurchaseTypes */,
 				9D63D0F019B1BFE30054EA87 /* rewards */,
 			);
@@ -321,8 +441,6 @@
 			children = (
 				9D63D0C819B1BFE30054EA87 /* CCMarketItem.cpp */,
 				9D63D0C919B1BFE30054EA87 /* CCMarketItem.h */,
-				9D63D0CA19B1BFE30054EA87 /* CCNonConsumableItem.cpp */,
-				9D63D0CB19B1BFE30054EA87 /* CCNonConsumableItem.h */,
 				9D63D0CC19B1BFE30054EA87 /* CCPurchasableVirtualItem.cpp */,
 				9D63D0CD19B1BFE30054EA87 /* CCPurchasableVirtualItem.h */,
 				9D63D0CE19B1BFE30054EA87 /* CCVirtualCategory.cpp */,
@@ -365,17 +483,6 @@
 			path = virtualGoods;
 			sourceTree = "<group>";
 		};
-		9D63D0E419B1BFE30054EA87 /* jsb */ = {
-			isa = PBXGroup;
-			children = (
-				9D63D0E519B1BFE30054EA87 /* jsb_soomla.cpp */,
-				9D63D0E619B1BFE30054EA87 /* jsb_soomla.h */,
-				9D63D0E719B1BFE30054EA87 /* JSBinding.cpp */,
-				9D63D0E819B1BFE30054EA87 /* JSBinding.h */,
-			);
-			path = jsb;
-			sourceTree = "<group>";
-		};
 		9D63D0E919B1BFE30054EA87 /* PurchaseTypes */ = {
 			isa = PBXGroup;
 			children = (
@@ -414,6 +521,8 @@
 				9D63D12D19B1C0C40054EA87 /* StoreAssetsBridge.mm */,
 				9D63D12E19B1C0C40054EA87 /* StoreService.h */,
 				9D63D12F19B1C0C40054EA87 /* StoreService.mm */,
+				F820C00419DC4C140084BBA5 /* StoreTypeConsts.h */,
+				F820C00219DC4BDA0084BBA5 /* StoreTypeConsts.mm */,
 			);
 			path = StoreBridge;
 			sourceTree = "<group>";
@@ -563,6 +672,7 @@
 			isa = PBXGroup;
 			children = (
 				C0B3C5EF168C6D0C00161FAA /* libCocos2dxStoreFromSources.a */,
+				9D4A728119DAAA1A0033DC46 /* libCocos2dxStoreFromSourcesWithJsb.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -580,6 +690,76 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		9D4A723E19DAAA1A0033DC46 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D4A723F19DAAA1A0033DC46 /* CCUpgradeVG.h in Headers */,
+				9D4A724019DAAA1A0033DC46 /* CCVirtualCategory.h in Headers */,
+				9D4A724119DAAA1A0033DC46 /* CCVirtualGood.h in Headers */,
+				9D4A724219DAAA1A0033DC46 /* SingleUsePackVG.h in Headers */,
+				9D4A724319DAAA1A0033DC46 /* CCNonConsumableItem.h in Headers */,
+				9D4A724419DAAA1A0033DC46 /* EquippableVG.h in Headers */,
+				9D4A724519DAAA1A0033DC46 /* VirtualCurrency.h in Headers */,
+				9D4A724619DAAA1A0033DC46 /* CCVirtualItem.h in Headers */,
+				9D4A724719DAAA1A0033DC46 /* CCStoreEventDispatcher.h in Headers */,
+				9D4A724819DAAA1A0033DC46 /* NotEnoughGoodsException.h in Headers */,
+				9D4A724919DAAA1A0033DC46 /* CCSingleUsePackVG.h in Headers */,
+				9D4A724A19DAAA1A0033DC46 /* NonConsumableStorage.h in Headers */,
+				9D4A724B19DAAA1A0033DC46 /* CCStoreEventHandler.h in Headers */,
+				9D4A724C19DAAA1A0033DC46 /* CCPurchaseType.h in Headers */,
+				9D4A724D19DAAA1A0033DC46 /* NonConsumableItem.h in Headers */,
+				9D4A724E19DAAA1A0033DC46 /* VirtualItemStorage.h in Headers */,
+				9D4A724F19DAAA1A0033DC46 /* SoomlaVerification.h in Headers */,
+				9D4A725019DAAA1A0033DC46 /* StoreJSONConsts.h in Headers */,
+				9D4A725119DAAA1A0033DC46 /* StoreAssetsBridge.h in Headers */,
+				9D4A725219DAAA1A0033DC46 /* PurchaseType.h in Headers */,
+				9D4A725319DAAA1A0033DC46 /* StoreInfo.h in Headers */,
+				9D4A725419DAAA1A0033DC46 /* CCPurchasableVirtualItem.h in Headers */,
+				9D4A725519DAAA1A0033DC46 /* VirtualItemNotFoundException.h in Headers */,
+				9D4A725619DAAA1A0033DC46 /* VirtualGoodStorage.h in Headers */,
+				9D4A725719DAAA1A0033DC46 /* PurchasableVirtualItem.h in Headers */,
+				9D4A725819DAAA1A0033DC46 /* CCStoreService.h in Headers */,
+				9D4A725919DAAA1A0033DC46 /* VirtualItem.h in Headers */,
+				9D4A725A19DAAA1A0033DC46 /* CCStoreAssets.h in Headers */,
+				9D4A725B19DAAA1A0033DC46 /* InsufficientFundsException.h in Headers */,
+				9D4A725C19DAAA1A0033DC46 /* SingleUseVG.h in Headers */,
+				9D4A725D19DAAA1A0033DC46 /* LifetimeVG.h in Headers */,
+				9D4A725E19DAAA1A0033DC46 /* VirtualCurrencyPack.h in Headers */,
+				9D4A725F19DAAA1A0033DC46 /* CCSingleUseVG.h in Headers */,
+				9D4A726019DAAA1A0033DC46 /* CCVirtualItemReward.h in Headers */,
+				9D4A726119DAAA1A0033DC46 /* MarketItem.h in Headers */,
+				9D4A726219DAAA1A0033DC46 /* CCEquippableVG.h in Headers */,
+				9D4A726319DAAA1A0033DC46 /* CCStoreInventory.h in Headers */,
+				9D4A726419DAAA1A0033DC46 /* CCLifetimeVG.h in Headers */,
+				9D4A726519DAAA1A0033DC46 /* CCPurchaseWithMarket.h in Headers */,
+				9D4A726619DAAA1A0033DC46 /* CCVirtualCurrency.h in Headers */,
+				9D4A726719DAAA1A0033DC46 /* VirtualGood.h in Headers */,
+				9D4A726819DAAA1A0033DC46 /* Cocos2dxStore.h in Headers */,
+				9D4A726919DAAA1A0033DC46 /* StoreInventory.h in Headers */,
+				9D4A726A19DAAA1A0033DC46 /* IStoreAssets.h in Headers */,
+				9D4A726B19DAAA1A0033DC46 /* CCStoreConsts.h in Headers */,
+				9D4A726C19DAAA1A0033DC46 /* StorageManager.h in Headers */,
+				9D4A726D19DAAA1A0033DC46 /* CCMarketItem.h in Headers */,
+				9D4A726E19DAAA1A0033DC46 /* PurchaseWithMarket.h in Headers */,
+				9D4A726F19DAAA1A0033DC46 /* VirtualCategory.h in Headers */,
+				9D4A727019DAAA1A0033DC46 /* VirtualCurrencyStorage.h in Headers */,
+				9D4A727119DAAA1A0033DC46 /* CCSoomlaStore.h in Headers */,
+				9D4A727219DAAA1A0033DC46 /* CCSimpleStoreEventHandler.h in Headers */,
+				9D4A727319DAAA1A0033DC46 /* StoreService.h in Headers */,
+				9D4A727419DAAA1A0033DC46 /* CCStoreInfo.h in Headers */,
+				9D4A727519DAAA1A0033DC46 /* VirtualItemReward.h in Headers */,
+				9D4A727619DAAA1A0033DC46 /* StoreConfig.h in Headers */,
+				9D4A727719DAAA1A0033DC46 /* StoreEventHandling.h in Headers */,
+				9D4A727819DAAA1A0033DC46 /* CCPurchaseWithVirtualItem.h in Headers */,
+				9D4A727919DAAA1A0033DC46 /* CCVirtualCurrencyPack.h in Headers */,
+				9D4A727A19DAAA1A0033DC46 /* SoomlaiOSStore-Prefix.pch in Headers */,
+				9D4A727B19DAAA1A0033DC46 /* SoomlaStore.h in Headers */,
+				9D4A727C19DAAA1A0033DC46 /* PurchaseWithVirtualItem.h in Headers */,
+				9D4A727D19DAAA1A0033DC46 /* UpgradeVG.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9D64AAD0190653C40091D664 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -588,8 +768,6 @@
 				9D63D10B19B1BFE30054EA87 /* CCVirtualCategory.h in Headers */,
 				9D63D11D19B1BFE30054EA87 /* CCVirtualGood.h in Headers */,
 				9D63D19C19B1C13F0054EA87 /* SingleUsePackVG.h in Headers */,
-				9D63D10719B1BFE30054EA87 /* CCNonConsumableItem.h in Headers */,
-				9D63D12119B1BFE30054EA87 /* JSBinding.h in Headers */,
 				9D63D19819B1C13F0054EA87 /* EquippableVG.h in Headers */,
 				9D63D19419B1C13F0054EA87 /* VirtualCurrency.h in Headers */,
 				9D63D10D19B1BFE30054EA87 /* CCVirtualItem.h in Headers */,
@@ -630,6 +808,7 @@
 				9D63D1BE19B1C13F0054EA87 /* StoreInventory.h in Headers */,
 				9D63D1AC19B1C13F0054EA87 /* IStoreAssets.h in Headers */,
 				9D63D0F919B1BFE30054EA87 /* CCStoreConsts.h in Headers */,
+				F820C00519DC4C140084BBA5 /* StoreTypeConsts.h in Headers */,
 				9D63D18019B1C13F0054EA87 /* StorageManager.h in Headers */,
 				9D63D10519B1BFE30054EA87 /* CCMarketItem.h in Headers */,
 				9D63D1AF19B1C13F0054EA87 /* PurchaseWithMarket.h in Headers */,
@@ -646,7 +825,6 @@
 				9D63D11119B1BFE30054EA87 /* CCVirtualCurrencyPack.h in Headers */,
 				9D63D1B519B1C13F0054EA87 /* SoomlaiOSStore-Prefix.pch in Headers */,
 				9D63D1B619B1C13F0054EA87 /* SoomlaStore.h in Headers */,
-				9D63D11F19B1BFE30054EA87 /* jsb_soomla.h in Headers */,
 				9D63D1B119B1C13F0054EA87 /* PurchaseWithVirtualItem.h in Headers */,
 				9D63D1A019B1C13F0054EA87 /* UpgradeVG.h in Headers */,
 			);
@@ -655,6 +833,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		9D4A720019DAAA1A0033DC46 /* Cocos2dxStoreFromSourcesWithJsb */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D4A727E19DAAA1A0033DC46 /* Build configuration list for PBXNativeTarget "Cocos2dxStoreFromSourcesWithJsb" */;
+			buildPhases = (
+				9D4A720119DAAA1A0033DC46 /* Sources */,
+				9D4A723C19DAAA1A0033DC46 /* Frameworks */,
+				9D4A723E19DAAA1A0033DC46 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cocos2dxStoreFromSourcesWithJsb;
+			productName = SoomlaIOSStore;
+			productReference = 9D4A728119DAAA1A0033DC46 /* libCocos2dxStoreFromSourcesWithJsb.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		C0B3C5EE168C6D0C00161FAA /* Cocos2dxStoreFromSources */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C0B3C5FD168C6D0C00161FAA /* Build configuration list for PBXNativeTarget "Cocos2dxStoreFromSources" */;
@@ -694,27 +889,92 @@
 			projectRoot = "";
 			targets = (
 				C0B3C5EE168C6D0C00161FAA /* Cocos2dxStoreFromSources */,
+				9D4A720019DAAA1A0033DC46 /* Cocos2dxStoreFromSourcesWithJsb */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9D4A720119DAAA1A0033DC46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D4A720219DAAA1A0033DC46 /* CCPurchaseType.cpp in Sources */,
+				9D4A720319DAAA1A0033DC46 /* CCStoreEventDispatcher.cpp in Sources */,
+				9D4A720419DAAA1A0033DC46 /* SoomlaVerification.m in Sources */,
+				9D4A720519DAAA1A0033DC46 /* VirtualItemReward.m in Sources */,
+				9D4A720619DAAA1A0033DC46 /* CCVirtualCategory.cpp in Sources */,
+				9D4A720719DAAA1A0033DC46 /* CCStoreService.cpp in Sources */,
+				9D4A720819DAAA1A0033DC46 /* UpgradeVG.m in Sources */,
+				9D4A720919DAAA1A0033DC46 /* NonConsumableStorage.m in Sources */,
+				9D4A720A19DAAA1A0033DC46 /* CCUpgradeVG.cpp in Sources */,
+				9D4A720B19DAAA1A0033DC46 /* CCVirtualCurrency.cpp in Sources */,
+				9D4A720C19DAAA1A0033DC46 /* CCStoreInfo.cpp in Sources */,
+				9D4A720D19DAAA1A0033DC46 /* CCNonConsumableItem.cpp in Sources */,
+				9D4A720E19DAAA1A0033DC46 /* StoreService.mm in Sources */,
+				9D4A720F19DAAA1A0033DC46 /* CCVirtualCurrencyPack.cpp in Sources */,
+				9D4A721019DAAA1A0033DC46 /* CCPurchaseWithMarket.cpp in Sources */,
+				9D4A721119DAAA1A0033DC46 /* CCEquippableVG.cpp in Sources */,
+				9D4A721219DAAA1A0033DC46 /* CCSimpleStoreEventHandler.cpp in Sources */,
+				9D4A721319DAAA1A0033DC46 /* VirtualItem.m in Sources */,
+				9D4A721419DAAA1A0033DC46 /* CCSoomlaStore.cpp in Sources */,
+				9D4A721519DAAA1A0033DC46 /* StoreInventory.m in Sources */,
+				9D4A721619DAAA1A0033DC46 /* InsufficientFundsException.m in Sources */,
+				9D4A721719DAAA1A0033DC46 /* StorageManager.m in Sources */,
+				9D4A721819DAAA1A0033DC46 /* CCLifetimeVG.cpp in Sources */,
+				9D4A721919DAAA1A0033DC46 /* LifetimeVG.m in Sources */,
+				9D4A721A19DAAA1A0033DC46 /* CCPurchaseWithVirtualItem.cpp in Sources */,
+				9D4A721B19DAAA1A0033DC46 /* SingleUsePackVG.m in Sources */,
+				9D4A721C19DAAA1A0033DC46 /* StoreConfig.m in Sources */,
+				9D4A721D19DAAA1A0033DC46 /* VirtualGoodStorage.m in Sources */,
+				9D4A721E19DAAA1A0033DC46 /* PurchaseWithMarket.m in Sources */,
+				9D4A721F19DAAA1A0033DC46 /* PurchasableVirtualItem.m in Sources */,
+				9D4A722019DAAA1A0033DC46 /* StoreInfo.m in Sources */,
+				9D4A722119DAAA1A0033DC46 /* CCVirtualItemReward.cpp in Sources */,
+				9D4A722219DAAA1A0033DC46 /* VirtualItemNotFoundException.m in Sources */,
+				9D4A722319DAAA1A0033DC46 /* NonConsumableItem.m in Sources */,
+				9D4A722419DAAA1A0033DC46 /* CCStoreConsts.cpp in Sources */,
+				9D4A722519DAAA1A0033DC46 /* CCPurchasableVirtualItem.cpp in Sources */,
+				9D4A722619DAAA1A0033DC46 /* VirtualCurrency.m in Sources */,
+				9D4A722719DAAA1A0033DC46 /* StoreJSONConsts.m in Sources */,
+				9D4A722819DAAA1A0033DC46 /* SoomlaStore.m in Sources */,
+				9D4A722919DAAA1A0033DC46 /* CCStoreInventory.cpp in Sources */,
+				9D4A722A19DAAA1A0033DC46 /* VirtualGood.m in Sources */,
+				9D4A722B19DAAA1A0033DC46 /* VirtualCurrencyStorage.m in Sources */,
+				9D4A722C19DAAA1A0033DC46 /* EquippableVG.m in Sources */,
+				9D4A722D19DAAA1A0033DC46 /* CCSingleUsePackVG.cpp in Sources */,
+				9D4A722E19DAAA1A0033DC46 /* CCVirtualItem.cpp in Sources */,
+				9D4A722F19DAAA1A0033DC46 /* CCSingleUseVG.cpp in Sources */,
+				9D4A723019DAAA1A0033DC46 /* NotEnoughGoodsException.m in Sources */,
+				9D4A723119DAAA1A0033DC46 /* SingleUseVG.m in Sources */,
+				9D4A723219DAAA1A0033DC46 /* MarketItem.m in Sources */,
+				9D4A723319DAAA1A0033DC46 /* StoreAssetsBridge.mm in Sources */,
+				9D4A723419DAAA1A0033DC46 /* CCVirtualGood.cpp in Sources */,
+				9D4A723519DAAA1A0033DC46 /* PurchaseWithVirtualItem.m in Sources */,
+				9D4A723619DAAA1A0033DC46 /* VirtualItemStorage.m in Sources */,
+				9D4A723719DAAA1A0033DC46 /* VirtualCategory.m in Sources */,
+				9D4A723819DAAA1A0033DC46 /* PurchaseType.m in Sources */,
+				9D4A723919DAAA1A0033DC46 /* StoreEventHandling.m in Sources */,
+				9D4A723A19DAAA1A0033DC46 /* VirtualCurrencyPack.m in Sources */,
+				9D4A723B19DAAA1A0033DC46 /* CCMarketItem.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C0B3C5EB168C6D0C00161FAA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9D63D12219B1BFE30054EA87 /* CCPurchaseType.cpp in Sources */,
 				9D63D0FA19B1BFE30054EA87 /* CCStoreEventDispatcher.cpp in Sources */,
+				F820C00319DC4BDA0084BBA5 /* StoreTypeConsts.mm in Sources */,
 				9D63D1B919B1C13F0054EA87 /* SoomlaVerification.m in Sources */,
 				9D63D1B419B1C13F0054EA87 /* VirtualItemReward.m in Sources */,
 				9D63D10A19B1BFE30054EA87 /* CCVirtualCategory.cpp in Sources */,
 				9D63D0FF19B1BFE30054EA87 /* CCStoreService.cpp in Sources */,
 				9D63D1A119B1C13F0054EA87 /* UpgradeVG.m in Sources */,
-				9D63D17F19B1C13F0054EA87 /* NonConsumableStorage.m in Sources */,
 				9D63D11A19B1BFE30054EA87 /* CCUpgradeVG.cpp in Sources */,
 				9D63D10E19B1BFE30054EA87 /* CCVirtualCurrency.cpp in Sources */,
 				9D63D10219B1BFE30054EA87 /* CCStoreInfo.cpp in Sources */,
-				9D63D10619B1BFE30054EA87 /* CCNonConsumableItem.cpp in Sources */,
 				9D63D13319B1C0C40054EA87 /* StoreService.mm in Sources */,
 				9D63D11019B1BFE30054EA87 /* CCVirtualCurrencyPack.cpp in Sources */,
 				9D63D12419B1BFE30054EA87 /* CCPurchaseWithMarket.cpp in Sources */,
@@ -722,14 +982,12 @@
 				9D63D0F319B1BFE30054EA87 /* CCSimpleStoreEventHandler.cpp in Sources */,
 				9D63D1A519B1C13F0054EA87 /* VirtualItem.m in Sources */,
 				9D63D0F519B1BFE30054EA87 /* CCSoomlaStore.cpp in Sources */,
-				9D63D12019B1BFE30054EA87 /* JSBinding.cpp in Sources */,
 				9D63D1BF19B1C13F0054EA87 /* StoreInventory.m in Sources */,
 				9D63D1A719B1C13F0054EA87 /* InsufficientFundsException.m in Sources */,
 				9D63D18119B1C13F0054EA87 /* StorageManager.m in Sources */,
 				9D63D11419B1BFE30054EA87 /* CCLifetimeVG.cpp in Sources */,
 				9D63D19B19B1C13F0054EA87 /* LifetimeVG.m in Sources */,
 				9D63D12619B1BFE30054EA87 /* CCPurchaseWithVirtualItem.cpp in Sources */,
-				9D63D11E19B1BFE30054EA87 /* jsb_soomla.cpp in Sources */,
 				9D63D19D19B1C13F0054EA87 /* SingleUsePackVG.m in Sources */,
 				9D63D1BB19B1C13F0054EA87 /* StoreConfig.m in Sources */,
 				9D63D18919B1C13F0054EA87 /* VirtualGoodStorage.m in Sources */,
@@ -738,7 +996,6 @@
 				9D63D18319B1C13F0054EA87 /* StoreInfo.m in Sources */,
 				9D63D12819B1BFE30054EA87 /* CCVirtualItemReward.cpp in Sources */,
 				9D63D1AB19B1C13F0054EA87 /* VirtualItemNotFoundException.m in Sources */,
-				9D63D18F19B1C13F0054EA87 /* NonConsumableItem.m in Sources */,
 				9D63D0F819B1BFE30054EA87 /* CCStoreConsts.cpp in Sources */,
 				9D63D10819B1BFE30054EA87 /* CCPurchasableVirtualItem.cpp in Sources */,
 				9D63D19519B1C13F0054EA87 /* VirtualCurrency.m in Sources */,
@@ -769,6 +1026,79 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		9D4A727F19DAAA1A0033DC46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/SoomlaIOSStore.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOS2D_DEBUG=1",
+					CC_TARGET_OS_IPHONE,
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/../../../cocos2dx\"",
+					"\"$(SRCROOT)/../../../cocos2dx/include\"",
+					"\"$(SRCROOT)/../../../cocos2dx/kazmath/include\"",
+					"\"$(SRCROOT)/../../../cocos2dx/platform/third_party/ios\"",
+					"\"$(SRCROOT)/../../../cocos2dx/platform/ios\"",
+					"\"$(SRCROOT)/../../../cocos2dx/platform/ios/Simulation\"",
+					"$(SRCROOT)/../../../external/jansson",
+					"$(SRCROOT)/../../soomla-cocos2dx-core/Soomla/**",
+					"$(SRCROOT)/../../soomla-cocos2dx-core/development/soomla-native/projects/cocos2dx-ios-core/CoreCocos2dx/**",
+					"$(SRCROOT)/../../soomla-cocos2dx-core/development/submodules/soomla-ios-core/SoomlaiOSCore/**",
+				);
+				LIBRARY_SEARCH_PATHS = "";
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRIVATE_HEADERS_FOLDER_PATH = headers/private;
+				PRODUCT_NAME = Cocos2dxStoreFromSourcesWithJsb;
+				PUBLIC_HEADERS_FOLDER_PATH = headers/public;
+				SKIP_INSTALL = YES;
+				SYMROOT = out;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		9D4A728019DAAA1A0033DC46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/SoomlaIOSStore.dst;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = CC_TARGET_OS_IPHONE;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/../../../cocos2dx\"",
+					"\"$(SRCROOT)/../../../cocos2dx/include\"",
+					"\"$(SRCROOT)/../../../cocos2dx/kazmath/include\"",
+					"\"$(SRCROOT)/../../../cocos2dx/platform/third_party/ios\"",
+					"\"$(SRCROOT)/../../../cocos2dx/platform/ios\"",
+					"\"$(SRCROOT)/../../../cocos2dx/platform/ios/Simulation\"",
+					"$(SRCROOT)/../../../external/jansson",
+					"$(SRCROOT)/../../soomla-cocos2dx-core/Soomla/**",
+					"$(SRCROOT)/../../soomla-cocos2dx-core/development/soomla-native/projects/cocos2dx-ios-core/CoreCocos2dx/**",
+					"$(SRCROOT)/../../soomla-cocos2dx-core/development/submodules/soomla-ios-core/SoomlaiOSCore/**",
+				);
+				LIBRARY_SEARCH_PATHS = "";
+				LINK_WITH_STANDARD_LIBRARIES = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRIVATE_HEADERS_FOLDER_PATH = headers/private;
+				PRODUCT_NAME = Cocos2dxStoreFromSourcesWithJsb;
+				PUBLIC_HEADERS_FOLDER_PATH = headers/public;
+				SKIP_INSTALL = YES;
+				SYMROOT = out;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
 		C0B3C5FB168C6D0C00161FAA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -894,6 +1224,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9D4A727E19DAAA1A0033DC46 /* Build configuration list for PBXNativeTarget "Cocos2dxStoreFromSourcesWithJsb" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D4A727F19DAAA1A0033DC46 /* Debug */,
+				9D4A728019DAAA1A0033DC46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C0B3C5E9168C6D0C00161FAA /* Build configuration list for PBXProject "Cocos2dxStoreFromSources" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

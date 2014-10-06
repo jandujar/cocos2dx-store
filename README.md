@@ -9,6 +9,24 @@ cocos2dx-store
 
 > The `master` branch supports cocos2d-x v3.x. For cocos2d-x v2.x use `cocos2dx-v2` branch.*
 
+> Draw your attention this page covers integration of C++ based solutions. If you need information regarding JS solution follow the link: https://github.com/soomla/cocos2dx-store/wiki/jsb#cocos2dx-store
+**September 28, 2014**:
+`CCNonConsumableItem` class was removed.
+
+To create a non-consumable item, define it as `CCLifeTimeVG` with a `CCPurchaseWithMarket` in your `iStoreAssets` implementation.
+For example:
+```c++
+CCVirtualGood *noAdsLTVG = CCLifetimeVG::create(
+              CCString::create("No Ads"),
+              CCString::create("Test LifeTimeVG non-consumable item"),
+              CCString::create("no_ads"),
+              CCPurchaseWithMarket::createWithMarketItem(CCMarketItem::create(
+                            CCString::create("android.test.purchased"),
+                            CCInteger::create(CCMarketItem::NONCONSUMABLE), CCDouble::create(1.99))
+              )
+);
+```
+
 **Aug 30, 2014**: Re-Arranged project structure and optimized integration process.
 
 **May 30, 2014**: Support Amazon Billing Provider.
@@ -17,7 +35,16 @@ cocos2dx-store
 
 **October 28, 2013**: iOS server side verification is added. This feature is not activated by default. [learn more](https://github.com/soomla/cocos2dx-store#ios-server-side-verification)
 
-* More documentation and information in SOOMLA's [Knowledge Base](http://know.soom.la/docs/platforms/cocos2dx)  
+
+**Aug 30, 2014**: Re-Arranged project structure and optimized integration process.
+
+**May 30, 2014**: Support Amazon Billing Provider.
+
+**February 4, 2014**: Added support for js-bindings.
+
+**October 28, 2013**: iOS server side verification is added. This feature is not activated by default. [learn more](https://github.com/soomla/cocos2dx-store#ios-server-side-verification)
+
+Note: On iOS, the item also should be created as Non Consumable on iTunes Connect. More documentation and information in SOOMLA's [Knowledge Base](http://know.soom.la/docs/platforms/cocos2dx)  
 * For issues you can use the [issues](https://github.com/soomla/cocos2dx-store/issues) section or SOOMLA's [Answers Website](http://answers.soom.la)
 
 > cocos2dx-store currently supports all Cocos2d-x 3.x, and 2.x versions. At the moment code related to v2 is in `cocos2dx-v2` branch, v3 is in `master` branch.

@@ -2,7 +2,6 @@ package com.soomla.cocos2dx.store;
 
 import com.soomla.store.IStoreAssets;
 import com.soomla.store.data.StoreJSONConsts;
-import com.soomla.store.domain.NonConsumableItem;
 import com.soomla.store.domain.VirtualCategory;
 import com.soomla.store.domain.virtualCurrencies.VirtualCurrency;
 import com.soomla.store.domain.virtualCurrencies.VirtualCurrencyPack;
@@ -26,7 +25,6 @@ public class StoreAssetsBridge implements IStoreAssets {
     private VirtualGood[] goods;
     private VirtualCurrencyPack[] currencyPacks;
     private VirtualCategory[] categories;
-    private NonConsumableItem[] nonConsumableItems;
 
     public StoreAssetsBridge(int version, JSONObject jsonObject) {
         this.version = version;
@@ -85,14 +83,6 @@ public class StoreAssetsBridge implements IStoreAssets {
                 categories.add(o);
             }
             this.categories = categories.toArray(new VirtualCategory[categories.size()]);
-
-            List<NonConsumableItem> nonConsumables = new ArrayList<NonConsumableItem>();
-            JSONArray nonConsumableItemsDict = jsonObject.getJSONArray(StoreJSONConsts.STORE_NONCONSUMABLES);
-            for (int i = 0; i < nonConsumableItemsDict.length(); i++) {
-                NonConsumableItem o = new NonConsumableItem(nonConsumableItemsDict.getJSONObject(i));
-                nonConsumables.add(o);
-            }
-            this.nonConsumableItems = nonConsumables.toArray(new NonConsumableItem[nonConsumables.size()]);
         } catch (JSONException e) {
             // TODO: Implement error handling
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
@@ -123,10 +113,5 @@ public class StoreAssetsBridge implements IStoreAssets {
     @Override
     public VirtualCategory[] getCategories() {
         return categories;
-    }
-
-    @Override
-    public NonConsumableItem[] getNonConsumableItems() {
-        return nonConsumableItems;
     }
 }

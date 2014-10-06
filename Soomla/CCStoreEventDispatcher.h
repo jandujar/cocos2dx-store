@@ -66,8 +66,6 @@ namespace soomla {
 
         virtual void onMarketItemsRefreshStarted();
 
-        void proceedEventBillingSupport(cocos2d::CCDictionary *paramaters);
-
         void handle__EVENT_BILLING_NOT_SUPPORTED(cocos2d::CCDictionary *paramaters);
 
         void handle__EVENT_BILLING_SUPPORTED(cocos2d::CCDictionary *paramaters);
