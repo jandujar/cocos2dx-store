@@ -530,6 +530,7 @@
 		9D52648019DBE06100BDA0F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				DSTROOT = /tmp/SoomlaIOSStore.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -567,6 +568,7 @@
 		9D52648119DBE06100BDA0F5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				DSTROOT = /tmp/SoomlaIOSStore.dst;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
