@@ -58,52 +58,52 @@
     [[DomainHelper sharedDomainHelper] registerType:(NSString *)JSON_JSON_TYPE_EQUIPPABLE_VG
                                       withClassName:NSStringFromClass([EquippableVG class])
                                            andBlock:^id(NSDictionary *dict) {
-                                               return [[[EquippableVG alloc] initWithDictionary:dict] autorelease];
+                                               return [[EquippableVG alloc] initWithDictionary:dict] ;
                                            }];
     [[DomainHelper sharedDomainHelper] registerType:(NSString *)JSON_JSON_TYPE_LIFETIME_VG
                                       withClassName:NSStringFromClass([LifetimeVG class])
                                            andBlock:^id(NSDictionary *dict) {
-                                               return [[[LifetimeVG alloc] initWithDictionary:dict] autorelease];
+                                               return [[LifetimeVG alloc] initWithDictionary:dict] ;
                                            }];
     [[DomainHelper sharedDomainHelper] registerType:(NSString *)JSON_JSON_TYPE_SINGLE_USE_PACK_VG
                                       withClassName:NSStringFromClass([SingleUsePackVG class])
                                            andBlock:^id(NSDictionary *dict) {
-                                               return [[[SingleUsePackVG alloc] initWithDictionary:dict] autorelease];
+                                               return [[SingleUsePackVG alloc] initWithDictionary:dict] ;
                                            }];
     [[DomainHelper sharedDomainHelper] registerType:(NSString *)JSON_JSON_TYPE_SINGLE_USE_VG
                                       withClassName:NSStringFromClass([SingleUseVG class])
                                            andBlock:^id(NSDictionary *dict) {
-                                               return [[[SingleUseVG alloc] initWithDictionary:dict] autorelease];
+                                               return [[SingleUseVG alloc] initWithDictionary:dict] ;
                                            }];
     [[DomainHelper sharedDomainHelper] registerType:(NSString *)JSON_JSON_TYPE_UPGRADE_VG
                                       withClassName:NSStringFromClass([UpgradeVG class])
                                            andBlock:^id(NSDictionary *dict) {
-                                               return [[[UpgradeVG alloc] initWithDictionary:dict] autorelease];
+                                               return [[UpgradeVG alloc] initWithDictionary:dict] ;
                                            }];
     [[DomainHelper sharedDomainHelper] registerType:(NSString *)JSON_JSON_TYPE_VIRTUAL_CURRENCY
                                       withClassName:NSStringFromClass([VirtualCurrency class])
                                            andBlock:^id(NSDictionary *dict) {
-                                               return [[[VirtualCurrency alloc] initWithDictionary:dict] autorelease];
+                                               return [[VirtualCurrency alloc] initWithDictionary:dict] ;
                                            }];
     [[DomainHelper sharedDomainHelper] registerType:(NSString *)JSON_JSON_TYPE_VIRTUAL_CURRENCY_PACK
                                       withClassName:NSStringFromClass([VirtualCurrencyPack class])
                                            andBlock:^id(NSDictionary *dict) {
-                                               return [[[VirtualCurrencyPack alloc] initWithDictionary:dict] autorelease];
+                                               return [[VirtualCurrencyPack alloc] initWithDictionary:dict] ;
                                            }];
     [[DomainHelper sharedDomainHelper] registerType:(NSString *)JSON_JSON_TYPE_MARKET_ITEM
                                       withClassName:NSStringFromClass([MarketItem class])
                                            andBlock:^id(NSDictionary *dict) {
-                                               return [[[MarketItem alloc] initWithDictionary:dict] autorelease];
+                                               return [[MarketItem alloc] initWithDictionary:dict] ;
                                            }];
     [[DomainHelper sharedDomainHelper] registerType:(NSString *)JSON_JSON_TYPE_VIRTUAL_CATEGORY
                                       withClassName:NSStringFromClass([VirtualCategory class])
                                            andBlock:^id(NSDictionary *dict) {
-                                               return [[[VirtualCategory alloc] initWithDictionary:dict] autorelease];
+                                               return [[VirtualCategory alloc] initWithDictionary:dict] ;
                                            }];
     [[DomainHelper sharedDomainHelper] registerType:(NSString *)JSON_JSON_TYPE_ITEM
                                       withClassName:NSStringFromClass([VirtualItemReward class])
                                            andBlock:^id(NSDictionary *dict) {
-                                               return [[[VirtualItemReward alloc] initWithDictionary:dict] autorelease];
+                                               return [[VirtualItemReward alloc] initWithDictionary:dict] ;
                                            }];
 }
 

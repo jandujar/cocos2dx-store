@@ -532,7 +532,7 @@ Soomla = new function () {
 
   // ------- Core -------- //
   /**
-   * KeyValueStorage
+   * CoreService
    */
   var CoreService = Soomla.CoreService = declareClass("CoreService", {
     init: function init() {
@@ -759,6 +759,31 @@ Soomla = new function () {
     nonConsumables: [],
     version: 1
   });
+
+// ------- Highway -------- //
+  /**
+   * Cocos2dXSoomlaHighway
+   */
+  var Cocos2dXSoomlaHighway = Soomla.Cocos2dXSoomlaHighway = declareClass("Cocos2dXSoomlaHighway", {
+    init: function init(gameKey, envKey, countryCode, url) {
+      var result = callNative({
+        method: "CCSoomlaHighway::init",
+        gameKey: gameKey,
+        envKey: envKey,
+        url: url,
+        countryCode: countryCode
+      });
+      return result.return;
+    }
+  });
+  Cocos2dXSoomlaHighway.createShared = function(gameKey, envKey, countryCode, url) {
+    var ret = new Cocos2dXSoomlaHighway();
+    if (ret.init(gameKey, envKey, countryCode, url)) {
+      Soomla.cocos2dXSoomlaHighway = ret;
+    } else {
+      Soomla.cocos2dXSoomlaHighway = null;
+    }
+  };
 
   /**
    * EventHandler
