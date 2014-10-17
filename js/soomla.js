@@ -12,11 +12,11 @@ Soomla = new function () {
   var declareClass = Soomla.declareClass = function (ClassName, fields, parentClass) {
     var Clazz = function () {
       return _.extend(parentClass ? parentClass() : {}, fields ? fields : {}, {
-        jsonType: ClassName
+        className: ClassName
       });
     };
     Clazz.create = function (values) {
-      return _.defaults(values ? _.omit(values, "jsonType") : {}, Clazz());
+      return _.defaults(values ? _.omit(values, "className") : {}, Clazz());
     };
 
     return Clazz;
@@ -42,7 +42,7 @@ Soomla = new function () {
         return false;
       }
 
-      if (obj.jsonType != this.jsonType) {
+      if (obj.className != this.className) {
         return false;
       }
 
@@ -323,6 +323,9 @@ Soomla = new function () {
    * VirtualItem
    */
   var VirtualItem = Soomla.Models.VirtualItem = declareClass("VirtualItem", {
+    save: function () {
+      Soomla.storeInfo.saveItem(this);
+    }
   }, SoomlaEntity);
 
   /**
@@ -361,13 +364,6 @@ Soomla = new function () {
   var PurchasableVirtualItem = Soomla.Models.PurchasableVirtualItem = declareClass("PurchasableVirtualItem", {
     purchasableItem: null
   }, VirtualItem);
-
-  /**
-   * NonConsumableItem
-   */
-  var NonConsumableItem = Soomla.Models.NonConsumableItem = declareClass("NonConsumableItem", {
-
-  }, PurchasableVirtualItem);
 
   /**
    * VirtualCurrency
@@ -722,17 +718,17 @@ Soomla = new function () {
       });
       return extractCollection(retParams);
     },
-    getNonConsumableItems: function() {
-      var retParams = callNative({
-        method: "CCStoreInfo::getNonConsumableItems"
-      });
-      return extractCollection(retParams);
-    },
     getVirtualCategories: function() {
       var retParams = callNative({
         method: "CCStoreInfo::getVirtualCategories"
       });
       return extractCollection(retParams);
+    },
+    saveItem: function(virtualItem) {
+      callNative({
+        method: "CCStoreInfo::saveItem",
+        virtualItem: virtualItem
+      });
     }
   });
 
@@ -756,7 +752,6 @@ Soomla = new function () {
       goodUpgrades: [],
       goodPacks: []
     },
-    nonConsumables: [],
     version: 1
   });
 
@@ -1106,7 +1101,7 @@ Soomla = new function () {
 
           var pvi = Soomla.storeInfo.getPurchasableItemWithProductId(productId);
 
-          var purchaseWithMarket = pvi.purchaseType;
+          var purchaseWithMarket = pvi.purchasableItem;
           var mi = purchaseWithMarket.marketItem;
 
           mi.marketPrice        = marketPrice;
@@ -1572,25 +1567,6 @@ Soomla = new function () {
       callNative({
         method: "CCStoreInventory::removeGoodUpgrades",
         goodItemId: goodItemId
-      });
-    },
-    nonConsumableItemExists: function(nonConsItemId) {
-      var retParams = callNative({
-        method: "CCStoreInventory::nonConsumableItemExists",
-        nonConsItemId: nonConsItemId
-      });
-      return retParams.return;
-    },
-    addNonConsumableItem: function(nonConsItemId) {
-      callNative({
-        method: "CCStoreInventory::addNonConsumableItem",
-        nonConsItemId: nonConsItemId
-      });
-    },
-    removeNonConsumableItem: function(nonConsItemId) {
-      callNative({
-        method: "CCStoreInventory::removeNonConsumableItem",
-        nonConsItemId: nonConsItemId
       });
     }
   });
