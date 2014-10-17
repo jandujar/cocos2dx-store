@@ -1108,7 +1108,7 @@ Soomla = new function () {
           mi.marketTitle        = marketTitle;
           mi.marketDescription  = marketDescription;
 
-          pvi.save();
+          Soomla.storeInfo.saveItem(pvi);
 
           marketItems.push(pvi);
         });
