@@ -3,4 +3,4 @@
 	url = git@github.com:soomla/android-store.git
 [submodule "submodules/ios-store"]
 	path = development/submodules/ios-store
-	url = git@github.com:soomla/ios-store.git
+	url = git@github.com:jandujar/ios-store.git
