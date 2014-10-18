@@ -107,6 +107,7 @@ namespace soomla {
         static char const *EVENT_RESTORE_TRANSACTION_FINISHED;
         static char const *EVENT_RESTORE_TRANSACTION_STARTED;
         static char const *EVENT_UNEXPECTED_ERROR_IN_STORE;
+        static char const *EVENT_UNEXPECTED_ERROR_IN_STORE_WITH_MSG;
         static char const *EVENT_STORE_CONTROLLER_INITIALIZED;
         static char const *EVENT_MARKET_REFUND;
         static char const *EVENT_IAB_SERVICE_STARTED;

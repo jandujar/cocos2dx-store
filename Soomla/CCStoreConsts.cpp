@@ -101,6 +101,7 @@ namespace soomla {
     char const *CCStoreConsts::EVENT_RESTORE_TRANSACTION_FINISHED = "CCStoreEventHandler::onRestoreTransactionsFinished";
     char const *CCStoreConsts::EVENT_RESTORE_TRANSACTION_STARTED = "CCStoreEventHandler::onRestoreTransactionsStarted";
     char const *CCStoreConsts::EVENT_UNEXPECTED_ERROR_IN_STORE = "CCStoreEventHandler::onUnexpectedErrorInStore";
+    char const *CCStoreConsts::EVENT_UNEXPECTED_ERROR_IN_STORE_WITH_MSG = "CCStoreEventHandler::onUnexpectedErrorInStoreWithMessage";
     char const *CCStoreConsts::EVENT_STORE_CONTROLLER_INITIALIZED = "CCStoreEventHandler::onStoreControllerInitialized";
     char const *CCStoreConsts::EVENT_MARKET_REFUND = "CCStoreEventHandler::onMarketRefund";
     char const *CCStoreConsts::EVENT_IAB_SERVICE_STARTED = "CCStoreEventHandler::onIabServiceStarted";

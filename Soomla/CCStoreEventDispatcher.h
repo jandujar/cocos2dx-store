@@ -49,6 +49,10 @@ namespace soomla {
         virtual void onRestoreTransactionsStarted();
 
         virtual void onUnexpectedErrorInStore();
+        
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+        virtual void onUnexpectedErrorInStoreWithMessage(int ecode, cocos2d::CCString *message);
+#endif
 
         virtual void onStoreControllerInitialized();
 
@@ -101,6 +105,10 @@ namespace soomla {
         void handle__EVENT_RESTORE_TRANSACTION_STARTED(cocos2d::CCDictionary *parameters);
 
         void handle__EVENT_UNEXPECTED_ERROR_IN_STORE(cocos2d::CCDictionary *parameters);
+        
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+        void handle__EVENT_UNEXPECTED_ERROR_IN_STORE_WITH_MSG(cocos2d::CCDictionary *parameters);
+#endif
 
         void handle__EVENT_STORE_CONTROLLER_INITIALIZED(cocos2d::CCDictionary *parameters);
 

@@ -808,6 +808,7 @@ Soomla = new function () {
     onRestoreTransactionsStarted: function() {},
     onRestoreTransactionsFinished: function(success) {},
     onUnexpectedErrorInStore: function() {},
+    onUnexpectedErrorInStoreWithMessage: function(errorCode, errorMessage) {},
     onStoreControllerInitialized: function() {},
     // For Android only
     onMarketRefund: function(purchasableVirtualItem) {},
@@ -1152,6 +1153,16 @@ Soomla = new function () {
         _.forEach(Soomla.eventHandlers, function (eventHandler) {
           if (eventHandler.onUnexpectedErrorInStore) {
             eventHandler.onUnexpectedErrorInStore();
+          }
+        });
+      }
+      else if (methodName == "CCStoreEventHandler::onUnexpectedErrorInStoreWithMessage") {
+        var errorCode = parameters.errorCode;
+        var errorMessage = parameters.errorMessage;
+
+        _.forEach(Soomla.eventHandlers, function (eventHandler) {
+          if (eventHandler.onUnexpectedErrorInStoreWithMessage) {
+            eventHandler.onUnexpectedErrorInStoreWithMessage(errorCode,errorMessage);
           }
         });
       }
