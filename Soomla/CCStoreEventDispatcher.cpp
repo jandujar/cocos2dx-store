@@ -87,6 +87,12 @@ namespace soomla {
         eventDispatcher->registerEventHandler(CCStoreConsts::EVENT_UNEXPECTED_ERROR_IN_STORE,
                 this, (SEL_EventHandler) (&CCStoreEventDispatcher::handle__EVENT_UNEXPECTED_ERROR_IN_STORE));
 
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+        eventDispatcher->registerEventHandler(CCStoreConsts::EVENT_UNEXPECTED_ERROR_IN_STORE_WITH_MSG,
+                this, (SEL_EventHandler) (&CCStoreEventDispatcher::handle__EVENT_UNEXPECTED_ERROR_IN_STORE_WITH_MSG));
+
+#endif
+        
         eventDispatcher->registerEventHandler(CCStoreConsts::EVENT_STORE_CONTROLLER_INITIALIZED,
                 this, (SEL_EventHandler) (&CCStoreEventDispatcher::handle__EVENT_STORE_CONTROLLER_INITIALIZED));
 
@@ -198,6 +204,14 @@ namespace soomla {
             eventHandler->onUnexpectedErrorInStore();
         }
     }
+
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+    void CCStoreEventDispatcher::onUnexpectedErrorInStoreWithMessage(int ecode, cocos2d::CCString *message) {
+        FOR_EACH_EVENT_HANDLER(CCStoreEventHandler)
+            eventHandler->onUnexpectedErrorInStoreWithMessage(ecode, message);
+        }
+    }
+#endif
 
     void CCStoreEventDispatcher::onStoreControllerInitialized() {
         FOR_EACH_EVENT_HANDLER(CCStoreEventHandler)
@@ -465,6 +479,14 @@ namespace soomla {
     void CCStoreEventDispatcher::handle__EVENT_UNEXPECTED_ERROR_IN_STORE(cocos2d::CCDictionary *parameters) {
         this->onUnexpectedErrorInStore();
     }
+
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+    void CCStoreEventDispatcher::handle__EVENT_UNEXPECTED_ERROR_IN_STORE_WITH_MSG(cocos2d::CCDictionary *parameters) {
+        CCInteger *eCode = dynamic_cast<CCInteger *>(parameters->objectForKey("storeErrorCode"));
+        CCString *errorMsg = dynamic_cast<CCString *>(parameters->objectForKey("storeErrorMessage"));
+        this->onUnexpectedErrorInStoreWithMessage(eCode->getValue(),errorMsg);
+    }
+#endif
 
     void CCStoreEventDispatcher::handle__EVENT_STORE_CONTROLLER_INITIALIZED(cocos2d::CCDictionary *parameters) {
         this->onStoreControllerInitialized();

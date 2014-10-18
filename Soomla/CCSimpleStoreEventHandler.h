@@ -45,6 +45,10 @@ namespace soomla {
 
         virtual void onUnexpectedErrorInStore();
 
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+        virtual void onUnexpectedErrorInStoreWithMessage(int ecode, cocos2d::CCString *message);
+#endif
+
         virtual void onStoreControllerInitialized();
 
         virtual void onMarketItemsRefreshed(cocos2d::CCArray *virtualItems);

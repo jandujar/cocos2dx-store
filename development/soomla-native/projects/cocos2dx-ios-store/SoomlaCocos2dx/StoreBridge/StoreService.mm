@@ -424,6 +424,13 @@
     [ndkGlue registerCallbackHandlerForKey:EVENT_UNEXPECTED_ERROR_IN_STORE withBlock:^(NSNotification *notification, NSMutableDictionary *parameters) {
         [parameters setObject:@"CCStoreEventHandler::onUnexpectedErrorInStore" forKey:@"method"];
     }];
+    
+    [ndkGlue registerCallbackHandlerForKey:EVENT_UNEXPECTED_ERROR_IN_STORE_WITH_MSG withBlock:^(NSNotification *notification, NSMutableDictionary *parameters) {
+        [parameters setObject:@"CCStoreEventHandler::onUnexpectedErrorInStoreWithMessage" forKey:@"method"];
+        [parameters setObject: [notification.userInfo objectForKey:DICT_ELEMENT_STORE_ERROR_CODE] forKey:@"errorCode"];
+        [parameters setObject: [notification.userInfo objectForKey:DICT_ELEMENT_STORE_ERROR_MSG] forKey:@"errorMessage"];
+        
+    }];
 
     [ndkGlue registerCallbackHandlerForKey:EVENT_SOOMLASTORE_INIT withBlock:^(NSNotification *notification, NSMutableDictionary *parameters) {
         [parameters setObject:@"CCStoreEventHandler::onStoreControllerInitialized" forKey:@"method"];

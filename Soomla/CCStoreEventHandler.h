@@ -153,6 +153,15 @@ namespace soomla {
          unexpected error occurs in the store.
          */
         virtual void onUnexpectedErrorInStore() = 0;
+        
+        /**
+         Handles an `onUnexpectedErrorInStoreWithMessage` event, which is fired when an
+         unexpected error occurs in the store, and returns the error code and localized error message
+         */
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+        virtual void onUnexpectedErrorInStoreWithMessage(int ecode, cocos2d::CCString *message) = 0;
+#endif
+
 		
         /**
          Handles an `onStoreControllerInitialized` event, which is fired when 

@@ -69,6 +69,12 @@ void soomla::CCSimpleStoreEventHandler::onUnexpectedErrorInStore() {
 
 }
 
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
+void soomla::CCSimpleStoreEventHandler::onUnexpectedErrorInStoreWithMessage(int ecode, cocos2d::CCString *message){
+    
+}
+#endif
+
 void soomla::CCSimpleStoreEventHandler::onStoreControllerInitialized() {
 
 }
