@@ -35,7 +35,7 @@ Soomla = new function () {
   var SoomlaEntity = Soomla.Models.SoomlaEntity = declareClass("SoomlaEntity", {
     name: "",
     description: "",
-    id: null,
+    itemId: null,
     equals: function equals(obj) {
       // If parameter is null return false.
       if (obj == null) {
@@ -46,7 +46,7 @@ Soomla = new function () {
         return false;
       }
 
-      if (obj.id != this.id) {
+      if (obj.itemId != this.itemId) {
         return false;
       }
 
@@ -207,7 +207,7 @@ Soomla = new function () {
     },
     give: function give() {
       if (!this.schedule.approve(Soomla.rewardStorage.getTimesGiven(this))) {
-        logDebug("(Give) Reward is not approved by Schedule. id: " + this.id);
+        logDebug("(Give) Reward is not approved by Schedule. id: " + this.itemId);
         return false;
       }
 
@@ -374,7 +374,7 @@ Soomla = new function () {
   /**
    * VirtualCurrencyPack
    */
-  var VirtualCurrencyPack = Soomla.Models.VirtualCurrencyPack = declareClass("v", {
+  var VirtualCurrencyPack = Soomla.Models.VirtualCurrencyPack = declareClass("VirtualCurrencyPack", {
     currency_amount: 0,
     currency_itemId: null
   }, PurchasableVirtualItem);
@@ -458,6 +458,21 @@ Soomla = new function () {
     pvi_itemId: null,
     pvi_amount: null
   }, PurchaseType);
+
+  /**
+   * VirtualItemReward
+   */
+  var VirtualItemReward = Soomla.Models.VirtualItemReward = declareClass("VirtualItemReward", {
+    amount: null,
+    associatedItemId : null,
+    takeInner: function takeInner() {
+      Soomla.storeInventory.takeItem(this.associatedItemId, this.amount);
+      return true;
+    },
+    giveInner: function giveInner() {
+      Soomla.storeInventory.giveItem(this.associatedItemId, this.amount);
+    }
+  }, Reward);
 
 
   //------ Profile ------//
@@ -1603,15 +1618,24 @@ Soomla = new function () {
   var SoomlaProfile = Soomla.SoomlaProfile = declareClass("SoomlaProfile", {
     inited: false,
     init: function() {
+      callNative({
+        method: "CCProfileService::init"
+      });
+
       this.inited = true;
       return true;
     },
     login: function(provider, reward) {
-      callNative({
+      var toPassData = {
         method: "CCSoomlaProfile::login",
-        provider: provider.key,
-        reward: reward
-      });
+        provider: provider.key
+      };
+
+      if (reward) {
+        toPassData.reward = reward;
+      }
+
+      callNative(toPassData);
     },
     logout: function(provider) {
       callNative({
@@ -1627,15 +1651,20 @@ Soomla = new function () {
       return retParams.return;
     },
     updateStatus: function(provider, status, reward) {
-      callNative({
+      var toPassData = {
         method: "CCSoomlaProfile::updateStatus",
         provider: provider.key,
-        status: status,
-        reward: reward
-      });
+        status: status
+      };
+
+      if (reward) {
+        toPassData.reward = reward;
+      }
+
+      callNative(toPassData);
     },
     updateStory: function(provider, message, name, caption, description, link, picture, reward) {
-      callNative({
+      var toPassData = {
         method: "CCSoomlaProfile::updateStory",
         provider: provider.key,
         message: message,
@@ -1643,32 +1672,53 @@ Soomla = new function () {
         caption: caption,
         description: description,
         link: link,
-        picture: picture,
-        reward: reward
-      });
+        picture: picture
+      };
+
+      if (reward) {
+        toPassData.reward = reward;
+      }
+
+      callNative(toPassData);
     },
     uploadImage: function(provider, message, filePath, reward) {
-      callNative({
+      var toPassData = {
         method: "CCSoomlaProfile::uploadImage",
         provider: provider.key,
         message: message,
-        filePath: filePath,
-        reward: reward
-      });
+        filePath: filePath
+      };
+
+      if (reward) {
+        toPassData.reward = reward;
+      }
+
+      callNative(toPassData);
     },
     getContacts: function(provider, filePath, reward) {
-      callNative({
+      var toPassData = {
         method: "CCSoomlaProfile::getContacts",
         provider: provider.key,
         reward: reward
-      });
+      };
+
+      if (reward) {
+        toPassData.reward = reward;
+      }
+
+      callNative(toPassData);
     },
     getFeed: function(provider, reward) {
-      callNative({
+      var toPassData = {
         method: "CCSoomlaProfile::getFeed",
-        provider: provider.key,
-        reward: reward
-      });
+        provider: provider.key
+      };
+
+      if (reward) {
+        toPassData.reward = reward;
+      }
+
+      callNative(toPassData);
     },
     isLoggedIn: function(provider) {
       var retParams = callNative({
@@ -1678,12 +1728,17 @@ Soomla = new function () {
       return retParams.return;
     },
     like: function(provider, pageName, reward) {
-      callNative({
+      var toPassData = {
         method: "CCSoomlaProfile::like",
         provider: provider.key,
-        pageName: pageName,
-        reward: reward
-      });
+        pageName: pageName
+      };
+
+      if (reward) {
+        toPassData.reward = reward;
+      }
+
+      callNative(toPassData);
     },
     openAppRatingPage: function() {
       callNative({
@@ -1702,7 +1757,7 @@ Soomla = new function () {
   };
 
   var callNative = function (params) {
-    var jsonString = Soomla.CCSoomlaNdkBridge.callNative(JSON.stringify(params));
+    var jsonString = Soomla.CCSoomlaNdkBridge.callNative(JSON.stringify(params, removeNulls));
     var result = JSON.parse(jsonString);
 
     if (!result.success) {
@@ -1710,6 +1765,14 @@ Soomla = new function () {
     }
     return result.result;
   };
+
+  var removeNulls = function(key, value) {
+    if (!value){
+      return undefined;
+    }
+
+    return value;
+  }
 
   var logDebug = Soomla.logDebug = function (output) {
     if (Soomla.DEBUG) {
