@@ -1663,11 +1663,41 @@ Soomla = new function () {
 
       callNative(toPassData);
     },
+    updateStatusDialog: function(provider, link, reward) {
+      var toPassData = {
+        method: "CCSoomlaProfile::updateStatusDialog",
+        provider: provider.key,
+        link: link
+      };
+
+      if (reward) {
+        toPassData.reward = reward;
+      }
+
+      callNative(toPassData);
+    },
     updateStory: function(provider, message, name, caption, description, link, picture, reward) {
       var toPassData = {
         method: "CCSoomlaProfile::updateStory",
         provider: provider.key,
         message: message,
+        name: name,
+        caption: caption,
+        description: description,
+        link: link,
+        picture: picture
+      };
+
+      if (reward) {
+        toPassData.reward = reward;
+      }
+
+      callNative(toPassData);
+    },
+    updateStoryDialog: function(provider, name, caption, description, link, picture, reward) {
+      var toPassData = {
+        method: "CCSoomlaProfile::updateStoryDialog",
+        provider: provider.key,
         name: name,
         caption: caption,
         description: description,
