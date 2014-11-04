@@ -508,12 +508,12 @@ Soomla = new function () {
   };
 
   Provider.findById = function(id) {
-    _.find(Soomla.Models.Provider, function(provider) {
+    return _.find(Soomla.Models.Provider, function(provider) {
       return !_.isFunction(provider) && provider.id == id;
     })
   };
   Provider.findByKey = function(key) {
-    _.find(Soomla.Models.Provider, function(provider) {
+    return _.find(Soomla.Models.Provider, function(provider) {
       return !_.isFunction(provider) && provider.key == key;
     });
   };
@@ -845,22 +845,25 @@ Soomla = new function () {
 
      @param provider The provider on which the login has failed
      @param errorDescription a Description of the reason for failure
+     @param payload an identification String sent from the caller of the action
      */
-    onLoginFailed: function(provider, errorDescription) {},
+    onLoginFailed: function(provider, errorDescription, payload) {},
 
     /**
      Called when the login process finishes successfully
 
      @param userProfile The user's profile from the logged in provider
+     @param payload an identification String sent from the caller of the action
      */
-    onLoginFinished: function(userProfile) {},
+    onLoginFinished: function(userProfile, payload) {},
 
     /**
      Called when the login process to a provider has started
 
      @param provider The provider on where the login has started
+     @param payload an identification String sent from the caller of the action
      */
-    onLoginStarted: function(provider) {},
+    onLoginStarted: function(provider, payload) {},
 
     /**
      Called when the logout process from a provider has failed
@@ -890,23 +893,26 @@ Soomla = new function () {
      @param provider The provider on which the get contacts process has
      failed
      @param errorDescription a Description of the reason for failure
+     @param payload an identification String sent from the caller of the action
      */
-    onGetContactsFailed: function(provider, errorDescription) {},
+    onGetContactsFailed: function(provider, errorDescription, payload) {},
 
     /**
      Called when the get contacts process from a provider has finished
 
      @param provider The provider on which the get contacts process finished
      @param contactsDict an Array of contacts represented by CCUserProfile
+     @param payload an identification String sent from the caller of the action
      */
-    onGetContactsFinished: function(provider, contactsDict) {},
+    onGetContactsFinished: function(provider, contactsDict, payload) {},
 
     /**
      Called when the get contacts process from a provider has started
 
      @param provider The provider on which the get contacts process started
+     @param payload an identification String sent from the caller of the action
      */
-    onGetContactsStarted: function(provider) {},
+    onGetContactsStarted: function(provider, payload) {},
 
     /**
      Called when the get feed process from a provider has failed
@@ -914,23 +920,26 @@ Soomla = new function () {
      @param provider The provider on which the get feed process has
      failed
      @param errorDescription a Description of the reason for failure
+     @param payload an identification String sent from the caller of the action
      */
-    onGetFeedFailed: function(provider, errorDescription) {},
+    onGetFeedFailed: function(provider, errorDescription, payload) {},
 
     /**
      Called when the get feed process from a provider has finished
 
      @param provider The provider on which the get feed process finished
      @param feedList an Array of feed entries represented by __String
+     @param payload an identification String sent from the caller of the action
      */
-    onGetFeedFinished: function(provider, feedList) {},
+    onGetFeedFinished: function(provider, feedList, payload) {},
 
     /**
      Called when the get feed process from a provider has started
 
      @param provider The provider on which the get feed process started
+     @param payload an identification String sent from the caller of the action
      */
-    onGetFeedStarted: function(provider) {},
+    onGetFeedStarted: function(provider, payload) {},
 
     /**
      Called when a generic social action on a provider has failed
@@ -938,31 +947,35 @@ Soomla = new function () {
      @param provider The provider on which the social action has failed
      @param socialActionType The social action which failed
      @param errorDescription a Description of the reason for failure
+     @param payload an identification String sent from the caller of the action
      */
-    onSocialActionFailedEvent: function(provider, socialActionType, errorDescription) {},
+    onSocialActionFailedEvent: function(provider, socialActionType, errorDescription, payload) {},
 
     /**
      Called when a generic social action on a provider has finished
 
      @param provider The provider on which the social action has finished
      @param socialActionType The social action which finished
+     @param payload an identification String sent from the caller of the action
      */
-    onSocialActionFinishedEvent: function(provider, socialActionType) {},
+    onSocialActionFinishedEvent: function(provider, socialActionType, payload) {},
 
     /**
      Called when a generic social action on a provider has started
 
      @param provider The provider on which the social action has started
      @param socialActionType The social action which started
+     @param payload an identification String sent from the caller of the action
      */
-    onSocialActionStartedEvent: function(provider, socialActionType) {},
+    onSocialActionStartedEvent: function(provider, socialActionType, payload) {},
 
     /**
      Called the login process to a provider has been cancelled
 
      @param provider The provider on which the login has failed
+     @param payload an identification String sent from the caller of the action
      */
-    onLoginCancelledEvent: function(provider) {},
+    onLoginCancelledEvent: function(provider, payload) {},
 
     /**
      Called when a user profile from a provider has been retrieved
@@ -1230,9 +1243,10 @@ Soomla = new function () {
       else if (methodName == "com.soomla.profile.events.auth.LoginCancelledEvent") {
         var providerId = parameters.provider;
         var provider = Provider.findById(providerId);
+        var payload = parameters.payload;
         _.forEach(Soomla.eventHandlers, function (eventHandler) {
           if (eventHandler.onLoginCancelledEvent) {
-            eventHandler.onLoginCancelledEvent(provider);
+            eventHandler.onLoginCancelledEvent(provider, payload);
           }
         });
       }
@@ -1240,26 +1254,30 @@ Soomla = new function () {
         var providerId = parameters.provider;
         var provider = Provider.findById(providerId);
         var errorDescription = parameters.errorDescription;
+        var payload = parameters.payload;
         _.forEach(Soomla.eventHandlers, function (eventHandler) {
           if (eventHandler.onLoginFailed) {
-            eventHandler.onLoginFailed(provider, errorDescription);
+            eventHandler.onLoginFailed(provider, errorDescription, payload);
           }
         });
       }
       else if (methodName == "com.soomla.profile.events.auth.LoginFinishedEvent") {
         var userProfile = parameters.userProfile;
+        var payload = parameters.payload;
         _.forEach(Soomla.eventHandlers, function (eventHandler) {
           if (eventHandler.onLoginFinished) {
-            eventHandler.onLoginFinished(userProfile);
+            eventHandler.onLoginFinished(userProfile, payload);
           }
         });
       }
       else if (methodName == "com.soomla.profile.events.auth.LoginStartedEvent") {
         var providerId = parameters.provider;
         var provider = Provider.findById(providerId);
+        var payload = parameters.payload;
+
         _.forEach(Soomla.eventHandlers, function (eventHandler) {
           if (eventHandler.onLoginStarted) {
-            eventHandler.onLoginStarted(provider);
+            eventHandler.onLoginStarted(provider, payload);
           }
         });
       }
@@ -1295,9 +1313,10 @@ Soomla = new function () {
         var providerId = parameters.provider;
         var provider = Provider.findById(providerId);
         var errorDescription = parameters.errorDescription;
+        var payload = parameters.payload;
         _.forEach(Soomla.eventHandlers, function (eventHandler) {
           if (eventHandler.onGetContactsFailed) {
-            eventHandler.onGetContactsFailed(provider, errorDescription);
+            eventHandler.onGetContactsFailed(provider, errorDescription, payload);
           }
         });
       }
@@ -1305,18 +1324,20 @@ Soomla = new function () {
         var providerId = parameters.provider;
         var provider = Provider.findById(providerId);
         var contacts = parameters.contacts;
+        var payload = parameters.payload;
         _.forEach(Soomla.eventHandlers, function (eventHandler) {
           if (eventHandler.onGetContactsFinished) {
-            eventHandler.onGetContactsFinished(provider, errorDescription);
+            eventHandler.onGetContactsFinished(provider, errorDescription, payload);
           }
         });
       }
       else if (methodName == "com.soomla.profile.events.social.GetContactsStartedEvent") {
         var providerId = parameters.provider;
         var provider = Provider.findById(providerId);
+        var payload = parameters.payload;
         _.forEach(Soomla.eventHandlers, function (eventHandler) {
           if (eventHandler.onGetContactsStarted) {
-            eventHandler.onGetContactsStarted(provider);
+            eventHandler.onGetContactsStarted(provider, payload);
           }
         });
       }
@@ -1324,9 +1345,10 @@ Soomla = new function () {
         var providerId = parameters.provider;
         var provider = Provider.findById(providerId);
         var errorDescription = parameters.errorDescription;
+        var payload = parameters.payload;
         _.forEach(Soomla.eventHandlers, function (eventHandler) {
           if (eventHandler.onGetFeedFailed) {
-            eventHandler.onGetFeedFailed(provider, errorDescription);
+            eventHandler.onGetFeedFailed(provider, errorDescription, payload);
           }
         });
       }
@@ -1334,18 +1356,20 @@ Soomla = new function () {
         var providerId = parameters.provider;
         var provider = Provider.findById(providerId);
         var feed = parameters.feed;
+        var payload = parameters.payload;
         _.forEach(Soomla.eventHandlers, function (eventHandler) {
           if (eventHandler.onGetFeedFinished) {
-            eventHandler.onGetFeedFinished(provider, feed);
+            eventHandler.onGetFeedFinished(provider, feed, payload);
           }
         });
       }
       else if (methodName == "com.soomla.profile.events.social.GetFeedStartedEvent") {
         var providerId = parameters.provider;
         var provider = Provider.findById(providerId);
+        var payload = parameters.payload;
         _.forEach(Soomla.eventHandlers, function (eventHandler) {
           if (eventHandler.onGetFeedStarted) {
-            eventHandler.onGetFeedStarted(provider);
+            eventHandler.onGetFeedStarted(provider, payload);
           }
         });
       }
@@ -1354,9 +1378,10 @@ Soomla = new function () {
         var provider = Provider.findById(providerId);
         var socialActionType = parameters.socialActionType;
         var errorDescription = parameters.errorDescription;
+        var payload = parameters.payload;
         _.forEach(Soomla.eventHandlers, function (eventHandler) {
           if (eventHandler.onSocialActionFailedEvent) {
-            eventHandler.onSocialActionFailedEvent(provider, socialActionType, errorDescription);
+            eventHandler.onSocialActionFailedEvent(provider, socialActionType, errorDescription, payload);
           }
         });
       }
@@ -1364,9 +1389,10 @@ Soomla = new function () {
         var providerId = parameters.provider;
         var provider = Provider.findById(providerId);
         var socialActionType = parameters.socialActionType;
+        var payload = parameters.payload;
         _.forEach(Soomla.eventHandlers, function (eventHandler) {
           if (eventHandler.onSocialActionFinishedEvent) {
-            eventHandler.onSocialActionFinishedEvent(provider, socialActionType);
+            eventHandler.onSocialActionFinishedEvent(provider, socialActionType, payload);
           }
         });
       }
@@ -1374,9 +1400,10 @@ Soomla = new function () {
         var providerId = parameters.provider;
         var provider = Provider.findById(providerId);
         var socialActionType = parameters.socialActionType;
+        var payload = parameters.payload;
         _.forEach(Soomla.eventHandlers, function (eventHandler) {
           if (eventHandler.onSocialActionStartedEvent) {
-            eventHandler.onSocialActionStartedEvent(provider, socialActionType);
+            eventHandler.onSocialActionStartedEvent(provider, socialActionType, payload);
           }
         });
       }
@@ -1625,11 +1652,18 @@ Soomla = new function () {
       this.inited = true;
       return true;
     },
-    login: function(provider, reward) {
+    login: function(provider, payload, reward) {
       var toPassData = {
         method: "CCSoomlaProfile::login",
         provider: provider.key
       };
+
+      if (payload) {
+        toPassData.payload = payload;
+      }
+      else {
+        toPassData.payload = "default";
+      }
 
       if (reward) {
         toPassData.reward = reward;
@@ -1650,33 +1684,47 @@ Soomla = new function () {
       });
       return retParams.return;
     },
-    updateStatus: function(provider, status, reward) {
+    updateStatus: function(provider, status, payload, reward) {
       var toPassData = {
         method: "CCSoomlaProfile::updateStatus",
         provider: provider.key,
         status: status
       };
 
+      if (payload) {
+        toPassData.payload = payload;
+      }
+      else {
+        toPassData.payload = "default";
+      }
+
       if (reward) {
         toPassData.reward = reward;
       }
 
       callNative(toPassData);
     },
-    updateStatusDialog: function(provider, link, reward) {
+    updateStatusDialog: function(provider, link, payload, reward) {
       var toPassData = {
         method: "CCSoomlaProfile::updateStatusDialog",
         provider: provider.key,
         link: link
       };
 
+      if (payload) {
+        toPassData.payload = payload;
+      }
+      else {
+        toPassData.payload = "default";
+      }
+
       if (reward) {
         toPassData.reward = reward;
       }
 
       callNative(toPassData);
     },
-    updateStory: function(provider, message, name, caption, description, link, picture, reward) {
+    updateStory: function(provider, message, name, caption, description, link, picture, payload, reward) {
       var toPassData = {
         method: "CCSoomlaProfile::updateStory",
         provider: provider.key,
@@ -1688,13 +1736,20 @@ Soomla = new function () {
         picture: picture
       };
 
+      if (payload) {
+        toPassData.payload = payload;
+      }
+      else {
+        toPassData.payload = "default";
+      }
+
       if (reward) {
         toPassData.reward = reward;
       }
 
       callNative(toPassData);
     },
-    updateStoryDialog: function(provider, name, caption, description, link, picture, reward) {
+    updateStoryDialog: function(provider, name, caption, description, link, picture, payload, reward) {
       var toPassData = {
         method: "CCSoomlaProfile::updateStoryDialog",
         provider: provider.key,
@@ -1705,13 +1760,20 @@ Soomla = new function () {
         picture: picture
       };
 
+      if (payload) {
+        toPassData.payload = payload;
+      }
+      else {
+        toPassData.payload = "default";
+      }
+
       if (reward) {
         toPassData.reward = reward;
       }
 
       callNative(toPassData);
     },
-    uploadImage: function(provider, message, filePath, reward) {
+    uploadImage: function(provider, message, filePath, payload, reward) {
       var toPassData = {
         method: "CCSoomlaProfile::uploadImage",
         provider: provider.key,
@@ -1719,30 +1781,51 @@ Soomla = new function () {
         filePath: filePath
       };
 
+      if (payload) {
+        toPassData.payload = payload;
+      }
+      else {
+        toPassData.payload = "default";
+      }
+
       if (reward) {
         toPassData.reward = reward;
       }
 
       callNative(toPassData);
     },
-    getContacts: function(provider, filePath, reward) {
+    getContacts: function(provider, filePath, payload, reward) {
       var toPassData = {
         method: "CCSoomlaProfile::getContacts",
         provider: provider.key,
         reward: reward
       };
 
+      if (payload) {
+        toPassData.payload = payload;
+      }
+      else {
+        toPassData.payload = "default";
+      }
+
       if (reward) {
         toPassData.reward = reward;
       }
 
       callNative(toPassData);
     },
-    getFeed: function(provider, reward) {
+    getFeed: function(provider, payload, reward) {
       var toPassData = {
         method: "CCSoomlaProfile::getFeed",
         provider: provider.key
       };
+
+      if (payload) {
+        toPassData.payload = payload;
+      }
+      else {
+        toPassData.payload = "default";
+      }
 
       if (reward) {
         toPassData.reward = reward;
