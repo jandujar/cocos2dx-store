@@ -1652,7 +1652,7 @@ Soomla = new function () {
       this.inited = true;
       return true;
     },
-    login: function(provider, payload, reward) {
+    login: function(provider, reward, payload) {
       var toPassData = {
         method: "CCSoomlaProfile::login",
         provider: provider.key
@@ -1704,7 +1704,7 @@ Soomla = new function () {
 
       callNative(toPassData);
     },
-    updateStatusDialog: function(provider, link, payload, reward) {
+    updateStatusDialog: function(provider, link, reward, payload) {
       var toPassData = {
         method: "CCSoomlaProfile::updateStatusDialog",
         provider: provider.key,
@@ -1724,7 +1724,7 @@ Soomla = new function () {
 
       callNative(toPassData);
     },
-    updateStory: function(provider, message, name, caption, description, link, picture, payload, reward) {
+    updateStory: function(provider, message, name, caption, description, link, picture, reward, payload) {
       var toPassData = {
         method: "CCSoomlaProfile::updateStory",
         provider: provider.key,
@@ -1749,7 +1749,7 @@ Soomla = new function () {
 
       callNative(toPassData);
     },
-    updateStoryDialog: function(provider, name, caption, description, link, picture, payload, reward) {
+    updateStoryDialog: function(provider, name, caption, description, link, picture, reward, payload) {
       var toPassData = {
         method: "CCSoomlaProfile::updateStoryDialog",
         provider: provider.key,
@@ -1773,7 +1773,7 @@ Soomla = new function () {
 
       callNative(toPassData);
     },
-    uploadImage: function(provider, message, filePath, payload, reward) {
+    uploadImage: function(provider, message, filePath, reward, payload) {
       var toPassData = {
         method: "CCSoomlaProfile::uploadImage",
         provider: provider.key,
@@ -1794,7 +1794,7 @@ Soomla = new function () {
 
       callNative(toPassData);
     },
-    getContacts: function(provider, filePath, payload, reward) {
+    getContacts: function(provider, filePath, reward, payload) {
       var toPassData = {
         method: "CCSoomlaProfile::getContacts",
         provider: provider.key,
@@ -1814,7 +1814,7 @@ Soomla = new function () {
 
       callNative(toPassData);
     },
-    getFeed: function(provider, payload, reward) {
+    getFeed: function(provider, reward, payload) {
       var toPassData = {
         method: "CCSoomlaProfile::getFeed",
         provider: provider.key
