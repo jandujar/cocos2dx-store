@@ -528,11 +528,11 @@ Soomla = new function () {
 
 
   function extractModel(retParams) {
-    return retParams.return;
+    return retParams['return'];
   }
 
   function extractCollection(retParams) {
-    var retArray = retParams.return;
+    var retArray = retParams['return'];
 
     var result = [];
     for (var i = 0; i < retArray.length; i++) {
@@ -557,7 +557,7 @@ Soomla = new function () {
         method: "CCCoreService::getTimesGiven",
         reward: reward
       });
-      return result.return;
+      return result['return'];
     },
     setRewardStatus: function setRewardStatus(reward, give, notify) {
       callNative({
@@ -572,7 +572,7 @@ Soomla = new function () {
         method: "CCCoreService::getLastSeqIdxGiven",
         reward: sequenceReward
       });
-      return result.return;
+      return result['return'];
     },
     setLastSeqIdxGiven: function setLastSeqIdxGiven(sequenceReward, idx) {
       callNative({
@@ -587,7 +587,7 @@ Soomla = new function () {
         method: "CCCoreService::getValue",
         key: key
       });
-      return result.return;
+      return result['return'];
     },
     kvStorageSetValue: function kvStorageSetValue(key, val) {
       callNative({
@@ -783,7 +783,7 @@ Soomla = new function () {
         url: url,
         countryCode: countryCode
       });
-      return result.return;
+      return result['return'];
     }
   });
   Cocos2dXSoomlaHighway.createShared = function(gameKey, envKey, countryCode, url) {
@@ -1518,7 +1518,7 @@ Soomla = new function () {
       var retParams = callNative({
         method: "CCSoomlaStore::transactionsAlreadyRestored"
       });
-      return retParams.return;
+      return retParams['return'];
     },
     refreshMarketItemsDetails: function() {
       callNative({
@@ -1561,7 +1561,7 @@ Soomla = new function () {
         method: "CCStoreInventory::getItemBalance",
         itemId: itemId
       });
-      return retParams.return;
+      return retParams['return'];
     },
     giveItem: function(itemId, amount) {
       callNative({
@@ -1594,21 +1594,21 @@ Soomla = new function () {
         method: "CCStoreInventory::isVirtualGoodEquipped",
         itemId: itemId
       });
-      return retParams.return;
+      return retParams['return'];
     },
     getGoodUpgradeLevel: function(goodItemId) {
       var retParams = callNative({
         method: "CCStoreInventory::getGoodUpgradeLevel",
         goodItemId: goodItemId
       });
-      return retParams.return;
+      return retParams['return'];
     },
     getGoodCurrentUpgrade: function(goodItemId) {
       var retParams = callNative({
         method: "CCStoreInventory::getGoodCurrentUpgrade",
         goodItemId: goodItemId
       });
-      return retParams.return;
+      return retParams['return'];
     },
     upgradeGood: function(goodItemId) {
       callNative({
@@ -1682,7 +1682,7 @@ Soomla = new function () {
         method: "CCSoomlaProfile::getStoredUserProfile",
         provider: provider.key
       });
-      return retParams.return;
+      return retParams['return'];
     },
     updateStatus: function(provider, status, payload, reward) {
       var toPassData = {
@@ -1838,7 +1838,7 @@ Soomla = new function () {
         method: "CCSoomlaProfile::isLoggedIn",
         provider: provider.key
       });
-      return retParams.return;
+      return retParams['return'];
     },
     like: function(provider, pageName, reward) {
       var toPassData = {
