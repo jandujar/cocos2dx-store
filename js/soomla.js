@@ -494,17 +494,8 @@ Soomla = new function () {
 
   var Provider = Soomla.Models.Provider = {
     FACEBOOK: {id: 0, key: 'facebook'},
-    FOURSQUARE: {id: 1, key: 'foursquare'},
     GOOGLE: {id: 2, key: 'google'},
-    LINKEDIN: {id: 3, key: 'linkedin'},
-    MYSPACE: {id: 4, key: 'myspace'},
-    TWITTER: {id: 5, key: 'twitter'},
-    YAHOO: {id: 6, key: 'yahoo'},
-    SALESFORCE: {id: 7, key: 'salesforce'},
-    YAMMER: {id: 8, key: 'yammer'},
-    RUNKEEPER: {id: 9, key: 'runkeeper'},
-    INSTAGRAM: {id: 10, key: 'instagram'},
-    FLICKR: {id: 11, key: 'flickr'}
+    TWITTER: {id: 5, key: 'twitter'}
   };
 
   Provider.findById = function(id) {
@@ -1644,9 +1635,10 @@ Soomla = new function () {
    */
   var SoomlaProfile = Soomla.SoomlaProfile = declareClass("SoomlaProfile", {
     inited: false,
-    init: function() {
+    init: function(customParams) {
       callNative({
-        method: "CCProfileService::init"
+        method: "CCProfileService::init",
+        params: customParams
       });
 
       this.inited = true;
@@ -1860,9 +1852,9 @@ Soomla = new function () {
     }
   });
 
-  SoomlaProfile.createShared = function() {
+  SoomlaProfile.createShared = function(customParams) {
     var ret = new SoomlaProfile();
-    if (ret.init()) {
+    if (ret.init(customParams)) {
       Soomla.soomlaProfile = ret;
     } else {
       Soomla.soomlaProfile = null;
